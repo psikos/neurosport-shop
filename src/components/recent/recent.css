@@ -31,14 +31,16 @@
   font-size: 1.8rem;
   text-transform: uppercase;
   font-weight: 900;
+  color: var(--textColor);
 }
 
 .banner-span {
-  color: green;
+  color: var(--mainColor);
 }
 
 .baner-subtitle-wrapper {
   display: none;
+  color: var(--textColor);
   margin: 3px 0 7px;
 }
 
@@ -73,19 +75,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid green;
+  border: 3px solid var(--mainColor);
   box-sizing: border-box;
   border-radius: 2px;
 }
 
 .banner-button-wrapper span a:before {
   color: #fff;
-  background: green;
+  background: var(--mainColor);
   transform: rotateY(0deg) translateZ(20px);
 }
 
 .banner-button-wrapper span a:after {
-  color: green;
+  color: var(--mainColor);
   transform: rotateX(90deg) translateZ(20px);
 }
 
@@ -123,7 +125,7 @@
     display: initial;
     width: 20px;
     height: 8px;
-    background-color: green;
+    background-color: var(--mainColor);
     position: absolute;
     left: 0;
     top: 71%;

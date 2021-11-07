@@ -9,7 +9,8 @@ export default function Recent() {
     <div className="content-wrapper">
       <div className="recent-image-wrapper">
         <StaticImage
-          src="..\..\images\recent_w2000.jpg"
+          // src="..\..\images\recent_w2000.jpg"
+          src="https://raw.githubusercontent.com/psikos/neurosport-shop/main/src/images/recent_w2000.jpg"
           alt="A Gatsby astronaut"
           className="image"
         />
@@ -27,7 +28,7 @@ export default function Recent() {
             <span className="banner-span">W</span>inien
           </p>
           <div className="baner-subtitle-wrapper">
-            <p className="banner-subtitle">Kompedium wiedzy roślinożercy</p>
+            <p className="banner-subtitle">Kompendium wiedzy roślinożercy</p>
           </div>
 
           <div className="banner-button-wrapper">
