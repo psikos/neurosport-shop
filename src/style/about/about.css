@@ -1,0 +1,15 @@
+.about-p {
+  text-align: justify;
+  padding: 20px;
+  line-height: 1.4rem;
+  color: var(--textColor);
+}
+
+.about-p a {
+  color: var(--mainColor);
+  text-decoration: none;
+}
+
+.about-p a:hover {
+  color: var(--darkenMainColor);
+}

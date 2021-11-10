@@ -1,0 +1,66 @@
+.author-image-wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  .radius-holder {
+    width: 250px;
+    position: relative;
+
+    .gatsby-image-wrapper {
+      border-radius: 50%;
+      border: 3px solid var(--lightenMainColor);
+
+      img {
+        transform: translateX(-15px);
+      }
+    }
+  }
+}
+
+/// border-gradient mixin: ///
+
+@mixin border-gradient($from, $to, $weight: 0) {
+  $mix-main: mix($from, $to);
+  $mix-sub-from: mix($mix-main, $from);
+  $mix-sub-to: mix($mix-main, $to);
+
+  box-shadow: 0 1px 0 $weight rgba($mix-sub-to, 0.25),
+    0 -1px 0 $weight rgba($mix-sub-from, 0.25),
+    1px 0 0 $weight rgba($mix-sub-to, 0.25),
+    -1px 0 0 $weight rgba($mix-sub-from, 0.25),
+    1px -1px 0 $weight rgba($mix-main, 0.5),
+    -1px 1px 0 $weight rgba($mix-main, 0.5), 1px 1px 0 $weight rgba($to, 0.75),
+    -1px -1px 0 $weight rgba($from, 0.75);
+}
+
+.radius {
+    border-radius: 50%;
+  border: 2px solid red;
+
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.radius {
+  @include border-gradient(skyblue, hotpink);
+
+  animation: rotateThis 2s linear infinite;
+}
+
+@keyframes rotateThis {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+
+  to {
+    transform: rotate(360deg) scale(1);
+  }
+}

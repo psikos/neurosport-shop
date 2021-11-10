@@ -9,15 +9,16 @@ import "./footer.css"
 export default function Footer() {
   const footer_elements = [
     {
-      label: "O nas",
+      label: "about",
+      link:'/about'
     },
     {
       label: "Sklep",
-      link: 'shop',
+      link: '/shop',
     },
     {
       label: "Blog",
-      link: 'blog',
+      link: '/blog',
     },
     {
       label: "Program partnerski",
@@ -37,7 +38,7 @@ export default function Footer() {
           <ul className="footer-menu">
         {footer_elements.map(elem => (
           <li className="footer-item" key={elem.label}>
-            <Link to={elem.link}>{elem.label} </Link>   
+            <Link to={elem.link} activeClassName="active">{elem.label}</Link>   
           </li>
         ))}
         </ul>
