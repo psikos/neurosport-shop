@@ -1,3 +1,7 @@
+.author {
+    margin-top: 10px;
+}
+
 .author-image-wrapper {
   width: 100%;
 
@@ -5,12 +9,12 @@
   justify-content: center;
 
   .radius-holder {
-    width: 250px;
+    width: 150px;
     position: relative;
 
     .gatsby-image-wrapper {
       border-radius: 50%;
-      border: 3px solid var(--lightenMainColor);
+      border: 3px  solid var(--darkenMainColor);
 
       img {
         transform: translateX(-15px);
@@ -19,48 +23,53 @@
   }
 }
 
-/// border-gradient mixin: ///
-
-@mixin border-gradient($from, $to, $weight: 0) {
-  $mix-main: mix($from, $to);
-  $mix-sub-from: mix($mix-main, $from);
-  $mix-sub-to: mix($mix-main, $to);
-
-  box-shadow: 0 1px 0 $weight rgba($mix-sub-to, 0.25),
-    0 -1px 0 $weight rgba($mix-sub-from, 0.25),
-    1px 0 0 $weight rgba($mix-sub-to, 0.25),
-    -1px 0 0 $weight rgba($mix-sub-from, 0.25),
-    1px -1px 0 $weight rgba($mix-main, 0.5),
-    -1px 1px 0 $weight rgba($mix-main, 0.5), 1px 1px 0 $weight rgba($to, 0.75),
-    -1px -1px 0 $weight rgba($from, 0.75);
+.image {
+    filter: grayscale(50%);
+    opacity: 60%;
+    transition: filter 0.5s ease-in, opacity 1.5s ease-out;
 }
 
-.radius {
-    border-radius: 50%;
-  border: 2px solid red;
-
-  height: 100%;
-  width: 100%;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+.author-content-wrapper {
+    padding: 0px 30px;
 }
 
-.radius {
-  @include border-gradient(skyblue, hotpink);
-
-  animation: rotateThis 2s linear infinite;
+.author-h4 {
+    text-transform: uppercase;
+    color: var(--lightenTextColor);
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-left: 10px;
 }
 
-@keyframes rotateThis {
-  from {
-    transform: rotate(0deg) scale(1);
+.author-name {
+    font-size: 2rem;
+    color: var(--darkenMainColor);
+}
+
+.author-about {
+    text-align: justify;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    color: var(--textColor);
+}
+
+@media screen and (min-width: 650px) {
+    .author {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .author-image-wrapper {
+          margin-left: 10%;
+      }
+    }
+    .author-content-wrapper {
+        padding: 0px 20% 0 10px;
+    }
+
+    .author-image-wrapper .radius-holder {
+        width: 70%;
+    }
   }
-
-  to {
-    transform: rotate(360deg) scale(1);
-  }
-}
+  

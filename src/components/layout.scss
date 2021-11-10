@@ -5,6 +5,8 @@
   --lightenMainColor: lighten(#007A00, 5%);
   --darkenMainColor: darken(#007A00, 5%);
   --textColor: rgb(47,43,44);
+  --lightTextColor: lighten(rgb(47,43,44), 65%);
+  --lightenTextColor: lighten(rgb(47,43,44), 40%);
 }
 
 * {

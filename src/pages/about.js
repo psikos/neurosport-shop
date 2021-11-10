@@ -9,19 +9,20 @@ export default function about() {
   return (
     <Layout title={"About"}>
       <div className="about-wrapper">
-        <p className="about-p">
-          Internet przepełniony jest wiedzą. Ta nie zawsze pochodzi z rzetelnych
-          źródeł. Nieograniczona dostępność informacji, a właściwie trudność w
-          ustaleniu jej źródeł powoduje rozpowszechnianie się wiedzy
-          nieprawdziwej.{" "}
-          <Link to="/" _target="blank">
-            Neurosport
-          </Link>{" "}
-          to baza wiedzy oparta tylko o naukowe dowody. Treści pojawiające się
-          na stronie powstają zawsze w oparciu o aktualne badania naukowe.
-        </p>
-<Author />
-        
+        <div className="about-p-wrapper">
+          <p className="about-p">
+            Internet przepełniony jest wiedzą. Ta nie zawsze pochodzi z
+            rzetelnych źródeł. Nieograniczona dostępność informacji, a właściwie
+            trudność w ustaleniu jej źródeł powoduje rozpowszechnianie się
+            wiedzy nieprawdziwej.{" "}
+            <Link to="/" _target="blank">
+              Neurosport
+            </Link>{" "}
+            to baza wiedzy oparta tylko o naukowe dowody. Treści pojawiające się
+            na stronie powstają zawsze w oparciu o aktualne badania naukowe.
+          </p>
+        </div>
+        <Author />
       </div>
     </Layout>
   )
