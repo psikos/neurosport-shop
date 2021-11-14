@@ -22,7 +22,7 @@
   transform: translateX(-15px);
 }
 
-.image {
+.author-image-wrapper .image {
   filter: grayscale(50%);
   opacity: 60%;
   transition: filter 0.5s ease-in, opacity 1.5s ease-out;

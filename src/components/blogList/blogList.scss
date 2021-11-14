@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+.wrapper {
+    border-top: 1px solid var(--lightTextColor);
+  padding: 5px;
+}
+
+.article-list-headline {
+  color: var(--textColor);
+  font-size: 1.55rem;
+  margin-bottom: 10px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 1.2rem;
+    width: 10px;
+    background-color: var(--mainColor);
+    margin: 0 5px;
+  }
+}
+
+.article-list li {
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 700px) {
+.article-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    
+    flex-basis: auto;
+}
+.article-list li {
+    margin-bottom: 0;
+}
+}

@@ -1,6 +1,6 @@
 .content-wrapper {
   width: 100%;
-  height: 250px;
+  height: 340px;
   position: relative;
 }
 
@@ -96,9 +96,6 @@
 }
 
 @media screen and (min-width: 420px) {
-  .content-wrapper {
-    height: 300px;
-  }
   .baner-subtitle-wrapper {
     display: block;
   }
@@ -121,7 +118,7 @@
     margin-left: 25px;
   }
   .banner-subtitle::before {
-    content: '';
+    content: "";
     display: initial;
     width: 20px;
     height: 8px;

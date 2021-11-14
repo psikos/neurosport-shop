@@ -1,7 +1,8 @@
 .content-wrapper {
   width: 100%;
-  height: 250px;
+  height: 340px;
   position: relative;
+
 }
 
 .recent-image-wrapper {
@@ -93,10 +94,6 @@
 }
 
 @media screen and (min-width: 420px) {
-  .content-wrapper {
-    height: 300px;
-  }
-
   .baner-subtitle-wrapper {
     display: block;
   }
@@ -110,24 +107,24 @@
 }
 
 @media screen and (min-width: 800px) {
-    .banner-p {
-      line-height: 3.4rem;
-      font-size: 3.5rem;
-    }
+  .banner-p {
+    line-height: 3.4rem;
+    font-size: 3.5rem;
+  }
 
-    .banner-subtitle {
-        font-size: 1rem;
-        margin-left: 25px;
+  .banner-subtitle {
+    font-size: 1rem;
+    margin-left: 25px;
 
-        &::before {
-            content: '';
-            display: initial;
-            width: 20px;
-            height: 8px;
-            background-color: var(--mainColor);
-            position: absolute;
-            left: 0;
-            top: 71%;
-        }
+    &::before {
+      content: "";
+      display: initial;
+      width: 20px;
+      height: 8px;
+      background-color: var(--mainColor);
+      position: absolute;
+      left: 0;
+      top: 71%;
     }
   }
+}

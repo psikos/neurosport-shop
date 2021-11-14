@@ -1,6 +1,6 @@
 import React from "react"
 
-import { StaticImage } from "gatsby-plugin-image"
+import Img from "gatsby-image"
 
 import "./author.css"
 
@@ -17,12 +17,11 @@ export default function Author() {
       <div className="author-image-wrapper">
         <div className="radius-holder">
           {" "}
-          <StaticImage
+          {/* <Img
             src="https://raw.githubusercontent.com/psikos/neurosport-shop/main/src/images/jake.png"
-            // src="..\..\images\jake.png"
             alt="Jakub Wiącek"
             className="image"
-          />
+          /> */}
         </div>
       </div>
       <div className="author-content-wrapper">

@@ -21,13 +21,15 @@
       }
     }
   }
-}
 
-.image {
+  .image {
     filter: grayscale(50%);
     opacity: 60%;
     transition: filter 0.5s ease-in, opacity 1.5s ease-out;
 }
+}
+
+
 
 .author-content-wrapper {
     padding: 0px 30px;

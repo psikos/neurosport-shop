@@ -5,11 +5,10 @@
 
 .about-p {
   text-indent: 1.5rem;
-  text-align: justify;
   padding: 50px 30px;
   line-height: 1.7rem;
   color: var(--lightTextColor);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-style: italic;
   font-weight: 300;
 }
