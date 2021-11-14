@@ -75,5 +75,6 @@ module.exports = {
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
+    `gatsby-plugin-netlify`,
   ],
 }
