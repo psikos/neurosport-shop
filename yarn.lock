@@ -1025,7 +1025,7 @@
     "core-js-pure" "^3.16.0"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.14.6", "@babel/runtime@^7.15.4", "@babel/runtime@^7.3.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.14.6", "@babel/runtime@^7.14.8", "@babel/runtime@^7.15.4", "@babel/runtime@^7.3.4", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   "integrity" "sha512-99catp6bHCaxr4sJ/DbTGgHS4+Rs2RVd2g7iOap6SLGPDknRK9ztKNsE/Fg6QhSeh1FGE5f6gHGQmvvn3I3xhw=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.15.4.tgz"
   "version" "7.15.4"
@@ -5635,7 +5635,7 @@
     "yoga-layout-prebuilt" "^1.10.0"
     "yurnalist" "^2.1.0"
 
-"gatsby-core-utils@^3.0.0", "gatsby-core-utils@^3.1.2":
+"gatsby-core-utils@^3.0.0", "gatsby-core-utils@^3.0.0-next.0", "gatsby-core-utils@^3.1.2":
   "integrity" "sha512-l3LUdGNDlM3fLrdxRUGnsd/Szu9e8yLEL/pZIV2LuhTHMNwjOStiycEQivezsUhHNPobep1r5t4yWzP6r2cw/Q=="
   "resolved" "https://registry.npmjs.org/gatsby-core-utils/-/gatsby-core-utils-3.1.2.tgz"
   "version" "3.1.2"
@@ -5741,6 +5741,18 @@
     "gatsby-plugin-utils" "^2.0.0"
     "semver" "^7.3.5"
     "sharp" "^0.29.1"
+
+"gatsby-plugin-netlify@^4.0.0-next.0":
+  "integrity" "sha512-v8L1/9vnKDpKj1wGMwFlWa1al2nZm8+u/emxMjaevS8AIQqgFNarjGtDdDLyVSu9oN6Vk29ah77rJDcfycadjg=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-netlify/-/gatsby-plugin-netlify-4.0.0-next.0.tgz"
+  "version" "4.0.0-next.0"
+  dependencies:
+    "@babel/runtime" "^7.14.8"
+    "fs-extra" "^10.0.0"
+    "gatsby-core-utils" "^3.0.0-next.0"
+    "kebab-hash" "^0.1.2"
+    "lodash" "^4.17.21"
+    "webpack-assets-manifest" "^5.0.6"
 
 "gatsby-plugin-offline@^5.0.0":
   "integrity" "sha512-+7poj4PzZjJc5sN77KTyjRGJaWhPeoPaPLxlvzz/x1iCTsJCPdQcPY/TeoRbzSk5BFyU94KgPejYdvBl5i/Upg=="
@@ -5990,7 +6002,7 @@
     "@babel/core" "^7.15.5"
     "@babel/runtime" "^7.15.4"
 
-"gatsby@^4.0.0-next", "gatsby@^4.0.2":
+"gatsby@^4.0.0 || ^4.0.0-alpha", "gatsby@^4.0.0-next", "gatsby@^4.0.2":
   "integrity" "sha512-ijdRh6NXDXJashI5Yjk8NddwVNJT+oZ7aFIjcT184dFzRJ7RNGau8wDLJCuwe1CafFlWsAyNp4oRingYP4B6jg=="
   "resolved" "https://registry.npmjs.org/gatsby/-/gatsby-4.0.2.tgz"
   "version" "4.0.2"
