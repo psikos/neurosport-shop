@@ -59,6 +59,7 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: contentfulConfig,
+      forceFullSync: true,
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -75,6 +76,5 @@ module.exports = {
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
-    `gatsby-plugin-netlify`,
   ],
 }
