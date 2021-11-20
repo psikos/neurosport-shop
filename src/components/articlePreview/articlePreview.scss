@@ -1,17 +1,14 @@
 .article-preview {
   flex: 1;
-  min-width: 300px;
-
-  &:nth-child(1) {
-    flex: 2;
-  }
+  min-width: 40%;
+  height: 330px;
 }
 .article-link {
   text-decoration: none;
 }
 
 .article-preview .gatsby-image-wrapper {
-    height: 200px;
+    height: 50%;
   
     picture img {
       transition: transform 0.3s ease-in-out !important;
@@ -19,8 +16,9 @@
   }
 
 .article-preview-wrapper {
-  border-radius: 5px;
+  border-radius: 3px;
   overflow: hidden;
+  height: 100%;
 
   transition: background-color 0.3s ease-in-out;
   
@@ -33,11 +31,19 @@
   }
 }
 
-
+.article-link-text-wrapper {
+  padding: 10px 15px 15px;
+  height: calc(50% - 30px);
+}
 
 .article-link-text {
-  padding: 10px 15px 15px;
+  height: 100%;
+  
   color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
 }
 
 .article-link-author-name {

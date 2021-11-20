@@ -13,11 +13,20 @@ export default function ArticlePreview({ post }) {
             key={post.heroImage.fluid.src}
             alt={post.heroImage.title}
           />
-          <div className="article-link-text">
-            <h2>{post.title}</h2>
-            <p className="article-link-description">{post.description.description}</p>
-            <h3 className="article-link-author-name">{post.author.name}</h3>
-            <span className="article-link-created-at">{`Dodano ${post.createdAt} dni temu`}</span>
+          <div className="article-link-text-wrapper">
+            <div className="article-link-text">
+              <div>
+                <h2>{post.title}</h2>
+                <p className="article-link-description">
+                  {post.description.description}
+                </p>
+              </div>
+
+              <div>
+                <h3 className="article-link-author-name">{post.author.name}</h3>
+                <span className="article-link-created-at">{`Dodano ${post.createdAt} dni temu`}</span>
+              </div>
+            </div>
           </div>
         </Link>
       </div>
