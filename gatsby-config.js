@@ -24,10 +24,10 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `NEUROSPORT`,
+    description: `Description of a Neurosport`,
+    author: `@psikos`,
+    siteUrl: `https://neurosport.netlify.app/`,
   },
   flags: {
     PARALLEL_QUERY_RUNNING: true

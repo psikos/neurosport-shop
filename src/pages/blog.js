@@ -5,10 +5,6 @@ import Container from "../components/Container"
 import BlogList from "../components/blogList/BlogList"
 
 export default function blog({ data }) {
-  //   const style = {
-  //     fontSize: "3rem",
-  //     padding: "20px",
-  //   }
 
   return (
     <Layout title={"Blog"}>

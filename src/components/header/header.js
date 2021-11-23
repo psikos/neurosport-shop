@@ -6,7 +6,7 @@ import Logo from "../logo/Logo"
 import "./header.css"
 
 const Header = () => (
-  <header>
+  <header className="header">
     <div className="header-wrapper">
       <Navigation />
       <Logo />

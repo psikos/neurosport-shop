@@ -1,0 +1,31 @@
+.post-renderer-wrapper {
+    padding: 15px;
+}
+
+.post-renderer {
+    p {
+        line-height: 1.4rem;
+        padding: 15px 0;
+    }
+    li p {
+        padding: 3px 0;
+    }
+    ul,ol {
+    margin: 0 2rem;
+       list-style: none;
+    }
+
+    ul li p::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: var(--lightenMainColor); /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+      }
+
+      h1,h2,h3,h4,h5,h6 {
+          padding: 5px 0;
+      }
+
+}

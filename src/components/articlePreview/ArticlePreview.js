@@ -21,7 +21,6 @@ export default function ArticlePreview({ post }) {
                   {post.description.description}
                 </p>
               </div>
-
               <div>
                 <h3 className="article-link-author-name">{post.author.name}</h3>
                 <span className="article-link-created-at">{`Dodano ${post.createdAt} dni temu`}</span>
