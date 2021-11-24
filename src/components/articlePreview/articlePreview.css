@@ -46,7 +46,7 @@
 
 .article-link-author-name {
   display: inline;
-  margin-right: 10px;
+  margin: 0 10px;
   color: var(--darkenMainColor);
   opacity: 0.9;
 }
@@ -57,10 +57,30 @@
 }
 
 .article-link-created-at {
+  display: block;
+}
+
+.article-link-created-at {
   color: var(--lightenTextColor);
 }
 
 .article-link-description {
   line-height: 1.4rem;
   padding: 5px 0;
+}
+
+.article-preview .article-info .gatsby-image-wrapper {
+  width: 20px;
+  border-radius: 50%;
+  height: 100%;
+  border: 1px solid var(--lightenMainColor);
+}
+
+.article-preview .article-info .gatsby-image-wrapper img {
+  transform: translateX(-1px);
+}
+
+.article-info {
+  display: flex;
+  align-items: center;
 }

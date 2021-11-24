@@ -1,11 +1,11 @@
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from "react"
 
 import Layout from "../components/layout"
 import "../style/about/about.css"
 import Author from "../components/author/Author"
 
-export default function about() {
+export default function about({data:{authors}}) {
   return (
     <Layout title={"About"}>
       <div className="about-wrapper">
@@ -22,8 +22,24 @@ export default function about() {
             na stronie powstają zawsze w oparciu o aktualne badania naukowe.
           </p>
         </div>
-        <Author />
-      </div>
+        {authors.nodes.map(author=><Author author={author} />)}
+      </div>    
     </Layout>
   )
 }
+
+export const query = graphql`
+{
+  authors: allContentfulPerson {
+    nodes {
+      name
+      shortBio {
+        shortBio
+      }
+      image {
+        gatsbyImageData
+      }
+    }
+  }
+}
+`

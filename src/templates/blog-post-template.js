@@ -14,6 +14,12 @@ export const query = graphql`
     post: contentfulBlogPost(slug: { eq: $slug }) {
       title
       slug
+      author {
+        name
+        image {
+          gatsbyImageData
+        }
+      }
       heroImage {
         id
       }
@@ -50,7 +56,7 @@ const BlogPostTemplate = ({ data: { post } }) => {
   return (
     <Layout title={post.title}>
       <Container>
-        <BlogPostHeader title={post.title} />
+        <BlogPostHeader title={post.title} author={post.author} />
 
         <BlogPostRenderer output={output} />
       </Container>

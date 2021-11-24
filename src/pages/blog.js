@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Container from "../components/Container"
@@ -6,18 +6,18 @@ import BlogList from "../components/blogList/BlogList"
 
 export default function blog({ data }) {
 
-  return (
-    <Layout title={"Blog"}>
-      <Container>
-        <BlogList posts={data.posts.nodes} />
-      </Container>
-    </Layout>
-  )
+return (
+  <Layout title={"Blog"}>
+    <Container>
+      <BlogList posts={data.posts.nodes} />
+    </Container>
+  </Layout>
+)
 }
 
 export const query = graphql`
   {
-    posts: allContentfulBlogPost {
+    posts: allContentfulBlogPost(sort: {fields: publishDate, order: DESC}) {
       nodes {
         description {
           description
@@ -26,6 +26,9 @@ export const query = graphql`
         slug
         author {
           name
+          image {
+            gatsbyImageData
+          }
         }
         heroImage {
           id

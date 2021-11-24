@@ -1,17 +1,14 @@
-import React from 'react'
-import Layout from '../components/layout'
+import React from "react"
+import Container from "../components/Container"
+import Layout from "../components/layout"
+import ShopItemPreview from "../components/shopItemPreview/ShopItemPreview"
 
 export default function shop() {
-
-    const style = {
-        fontSize: '3rem',
-        padding: '20px'
-    }
-    return (
-        <Layout title={"Sklep"}>
-        <div style={style}>
-            This is shop
-        </div>
-        </Layout>
-    )
+  return (
+    <Layout title={"Sklep"}>
+      <Container>
+        <ShopItemPreview />
+      </Container>
+    </Layout>
+  )
 }

@@ -1,39 +1,33 @@
 import React from "react"
 
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import "./author.css"
 
-export default function Author() {
+export default function Author({ author }) {
   return (
     <div
       className="author"
       onMouseOver={() => {
-       const image = document.querySelector(".image");
-       image.style.filter = "none";
-       image.style.opacity = "100%";
+        const image = document.querySelector(".image")
+        image.style.filter = "none"
+        image.style.opacity = "100%"
       }}
     >
       <div className="author-image-wrapper">
         <div className="radius-holder">
           {" "}
-          {/* <Img
-            src="https://raw.githubusercontent.com/psikos/neurosport-shop/main/src/images/jake.png"
-            alt="Jakub Wiącek"
+          <GatsbyImage
+            image={getImage(author.image.gatsbyImageData)}
+            alt={author.name}
             className="image"
-          /> */}
+          />
         </div>
       </div>
       <div className="author-content-wrapper">
         <h4 className="author-h4">Autor</h4>
-        <h3 className="author-name">Jakub Wiącek</h3>
-        <p className="author-about">
-          Doktorant w Zakładzie Żywności i Żywienia na Akademii Wychowania
-          Fizycznego w Poznaniu, neurobiolog, dietetyk, wykładowca, trener
-          personalny, copywriter, autor setek artykułów o tematyce zdrowia,
-          diety, suplementacji i treningu na największych portalach związanych z
-          branżą fitness w Polsce.
-        </p>
+        <h3 className="author-name">{author.name}</h3>
+        <p className="author-about">{author.shortBio.shortBio}</p>
         <div className="author-links"></div>
       </div>
     </div>
