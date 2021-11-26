@@ -1,17 +1,15 @@
 import React from "react"
-import Img from "gatsby-image"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import "./articlePreview.css"
 
 export default function ArticlePreview({ post }) {
   return (
-    <li className="article-preview">
+    <li className="article-preview" key={post.slug}>
       <div className="article-preview-wrapper">
         <Link to={`/blog/${post.slug}`} className="article-link">
-          <Img
-            fluid={post.heroImage.fluid}
-            key={post.heroImage.fluid.src}
+          <GatsbyImage
+            image={getImage(post.heroImage.gatsbyImageData)}
             alt={post.heroImage.title}
           />
           <div className="article-link-text-wrapper">

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Container from "../components/Container"
@@ -32,6 +32,7 @@ export const query = graphql`
         }
         heroImage {
           id
+          gatsbyImageData
           fluid(maxWidth: 500, resizingBehavior: SCALE) {
             ...GatsbyContentfulFluid_tracedSVG
           }

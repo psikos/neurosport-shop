@@ -3,17 +3,18 @@
   min-width: 40%;
   height: 330px;
 }
+
 .article-link {
   text-decoration: none;
 }
 
 .article-preview .gatsby-image-wrapper {
-    height: 50%;
-  
-    picture img {
-      transition: transform 0.3s ease-in-out !important;
-    }
+  height: 50%;
+
+  picture img {
+    transition: transform 0.3s ease-in-out !important;
   }
+}
 
 .article-preview-wrapper {
   border-radius: 3px;
@@ -21,7 +22,7 @@
   height: 100%;
 
   transition: background-color 0.3s ease-in-out;
-  
+
   &:hover {
     background-color: var(--lightBackgroundColor);
 
@@ -38,12 +39,11 @@
 
 .article-link-text {
   height: 100%;
-  
+
   color: var(--textColor);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 
 .article-link-author-name {
