@@ -58,9 +58,9 @@ const BlogPostTemplate = ({ data: { post } }) => {
   }
 
   const output = renderRichText(post.bodyRichText, options)
-
+console.log(post.heroImage.file.url)
   return (
-    <Layout title={post.title} description={post.description.description} image={post.heroImage.file.url}>
+    <Layout title={post.title} description={post.description.description} image={`http:${post.heroImage.file.url}`}>
       <Container>
         <BlogPostHeader title={post.title} author={post.author} />
 
