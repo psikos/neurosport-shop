@@ -7,7 +7,7 @@ import Recent from "../components/recent/Recent"
 import RecentArticles from "../components/recentArticles/RecentArticles"
 
 const IndexPage = ({ data: { posts } }) => (
-  <Layout title={"Home"}>
+  <Layout title={"NEUROSPORT"}>
     <Recent />
     <RecentArticles posts={posts.nodes} />  
   </Layout>
@@ -36,6 +36,7 @@ export const query = graphql`
         title
         heroImage {
           gatsbyImageData
+          title
         }
       }
     }

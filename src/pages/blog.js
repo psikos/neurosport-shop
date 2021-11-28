@@ -5,19 +5,18 @@ import Container from "../components/Container"
 import BlogList from "../components/blogList/BlogList"
 
 export default function blog({ data }) {
-
-return (
-  <Layout title={"Blog"}>
-    <Container>
-      <BlogList posts={data.posts.nodes} />
-    </Container>
-  </Layout>
-)
+  return (
+    <Layout title={"Blog"} description={"Codzienna porcja wiedzy"}>
+      <Container>
+        <BlogList posts={data.posts.nodes} />
+      </Container>
+    </Layout>
+  )
 }
 
 export const query = graphql`
   {
-    posts: allContentfulBlogPost(sort: {fields: publishDate, order: DESC}) {
+    posts: allContentfulBlogPost(sort: { fields: publishDate, order: DESC }) {
       nodes {
         description {
           description
@@ -37,6 +36,9 @@ export const query = graphql`
             ...GatsbyContentfulFluid_tracedSVG
           }
           title
+          file {
+            url
+          }
         }
         createdAt(difference: "days")
       }

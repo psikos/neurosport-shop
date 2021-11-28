@@ -10,7 +10,7 @@ export default function RecentArticles({ posts }) {
         <h1 className="article-list-headline">Najnowsza dawka wiedzy</h1>
         <ul className="recent-articles-list">
           {posts.map(post => (
-            <ArticlePreview post={post} />
+            <ArticlePreview post={post} key={post.slug} />
           ))}
         </ul>
         <Link to="/blog" className="see-more">Więcej wiedzy...</Link>

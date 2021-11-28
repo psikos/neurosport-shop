@@ -6,7 +6,7 @@ import ShopItemPreview from "../components/shopItemPreview/ShopItemPreview"
 
 export default function shop({data: {shopItems}}) {
   return (
-    <Layout title={"Sklep"}>
+    <Layout title={"Sklep"} description="Wszystkie produkty NEUROSPORT">
       <Container>
         {shopItems.nodes.map(item=><ShopItemPreview item={item}/>)}
         

@@ -14,6 +14,9 @@ export const query = graphql`
     post: contentfulBlogPost(slug: { eq: $slug }) {
       title
       slug
+      description {
+        description
+      }
       author {
         name
         image {
@@ -22,6 +25,9 @@ export const query = graphql`
       }
       heroImage {
         id
+        file {
+          url
+        }
       }
       bodyRichText {
         raw
@@ -54,7 +60,7 @@ const BlogPostTemplate = ({ data: { post } }) => {
   const output = renderRichText(post.bodyRichText, options)
 
   return (
-    <Layout title={post.title}>
+    <Layout title={post.title} description={post.description.description} image={[post.heroImage.file.url]}>
       <Container>
         <BlogPostHeader title={post.title} author={post.author} />
 

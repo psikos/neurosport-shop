@@ -22,13 +22,16 @@ export default function Footer() {
     },
     {
       label: "Program partnerski",
+      link: '/partner-program',
     },
     
     {
       label: "FAQ",
+      link: '/faq',
     },
     {
       label: "Kontakt",
+      link: '/contact',
     },
   ]
 
