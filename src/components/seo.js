@@ -42,7 +42,7 @@ function Seo({ description, lang, meta, title ,image}) {
       meta={[
         {
           property: 'og:image',
-          content: ogImage,
+          content: image,
           // content: `${site.siteMetadata.siteUrl}${image || site.siteMetadata.defaultImage}`,
         },
         {

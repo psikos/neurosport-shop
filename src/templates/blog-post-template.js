@@ -25,8 +25,8 @@ export const query = graphql`
       }
       heroImage {
         id
-        file {
-          url
+        fluid {
+          src
         }
       }
       bodyRichText {
@@ -59,8 +59,10 @@ const BlogPostTemplate = ({ data: { post } }) => {
 
   const output = renderRichText(post.bodyRichText, options)
   
+  console.log(post.heroImage.fluid.src)
+
   return (
-    <Layout title={post.title} description={post.description.description} image={post.heroImage.file.url}>
+    <Layout title={post.title} description={post.description.description} image={post.heroImage.fluid.src}>
       <Container>
         <BlogPostHeader title={post.title} author={post.author} />
 

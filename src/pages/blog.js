@@ -36,8 +36,8 @@ export const query = graphql`
             ...GatsbyContentfulFluid_tracedSVG
           }
           title
-          file {
-            url
+          fluid {
+            src
           }
         }
         createdAt(difference: "days")
