@@ -34,11 +34,9 @@ export const query = graphql`
           gatsbyImageData
           fluid(maxWidth: 500, resizingBehavior: SCALE) {
             ...GatsbyContentfulFluid_tracedSVG
-          }
-          title
-          fluid {
             src
           }
+          title
         }
         createdAt(difference: "days")
       }
