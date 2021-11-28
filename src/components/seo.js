@@ -19,6 +19,8 @@ function Seo({ description, lang, meta, title ,image}) {
             title
             description
             author
+            defaultImage: image
+            siteUrl
           }
         }
       }
@@ -40,7 +42,7 @@ function Seo({ description, lang, meta, title ,image}) {
       meta={[
         {
           property: 'og:image',
-          content: image,
+          content: `${siteUrl}${image || defaultImage}`,
         },
         {
           name: `description`,

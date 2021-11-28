@@ -27,7 +27,8 @@ module.exports = {
     title: `NEUROSPORT`,
     description: `Description of a Neurosport`,
     author: `@psikos`,
-    siteUrl: `https://neurosport.netlify.app/`,
+    siteUrl: `https://neurosport.netlify.app`,
+    image: '/images/recent_w1280.jpg',
   },
   flags: {
     PARALLEL_QUERY_RUNNING: true
