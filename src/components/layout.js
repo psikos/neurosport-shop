@@ -8,7 +8,7 @@ import "./layout.css"
 
 import Footer from "./footer/Footer"
 
-const Layout = ({ children, title, description }) => {
+const Layout = ({ children, title, description, image }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -21,7 +21,7 @@ const Layout = ({ children, title, description }) => {
 
   return (
     <>
-      <Seo title={title} description={description} />
+      <Seo title={title} description={description} image={image} />
       {/* <Header siteTitle={`neurosport` || data.site.siteMetadata?.title} /> */}
       <Header />
 
