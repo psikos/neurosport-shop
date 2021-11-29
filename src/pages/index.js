@@ -5,11 +5,13 @@ import Layout from "../components/layout"
 
 import Recent from "../components/recent/Recent"
 import RecentArticles from "../components/recentArticles/RecentArticles"
+import Newsletter from "../components/newsletter/Newsletter"
 
 const IndexPage = ({ data: { posts } }) => (
   <Layout title={"NEUROSPORT"}>
     <Recent />
-    <RecentArticles posts={posts.nodes} />  
+    <RecentArticles posts={posts.nodes} />
+    <Newsletter />
   </Layout>
 )
 

@@ -1,0 +1,128 @@
+.newsletter-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--lightBackgroundColor);
+  padding: 40px 0;
+}
+
+.newsletter-form {
+  .newsletter-button {
+    padding: 20px 40px;
+    margin: 20px;
+    border: none;
+    cursor: pointer;
+    color: var(--lightBackgroundColor);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 2px;
+    background-color: var(--lightenMainColor);
+    transition: background-color 0.4s ease-in-out;
+
+    &:hover {
+      background-image: none;
+      background-color: var(--darkenMainColor);
+    }
+  }
+}
+
+.newsletter-form-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+$primary: var(--darkenMainColor);
+$secondary: var(--lightenMainColor);
+$white: #fff;
+$gray: #9b9b9b;
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  flex: 2;
+}
+
+.form__field {
+  font-family: inherit;
+    width: 340px;
+  border: 0;
+  border-bottom: 1px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $gray;
+  padding: 7px 15px;
+  background: transparent;
+  transition: border-color 0.2s ease-in-out;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    // font-size: 1.3rem;
+    cursor: text;
+    top: 25px;
+    left: 15px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  display: block;
+  transition: 0.2s ease-in-out;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  color: var(--mainColor);
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s ease-in-out;
+    font-size: 1rem;
+    color: var(--mainColor);
+    font-weight: 700;
+  }
+  padding-bottom: 6px;
+  //   font-weight: 700;
+  border-width: 2px;
+  border-image: linear-gradient(to right, $primary, $secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+
+@media screen and (min-width: 779px) {
+    .newsletter-form {
+        .newsletter-button { 
+          &:first-of-type {
+            margin-left: 23px;
+          }
+        }
+      }
+      .form__group {
+        margin-left: 22px;
+      }
+      .form__field {
+          width: 500px;
+      }
+      .newsletter-form-content {
+          flex-direction: row;
+      }
+
+}

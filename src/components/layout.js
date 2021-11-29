@@ -22,7 +22,6 @@ const Layout = ({ children, title, description, image }) => {
   return (
     <>
       <Seo title={title} description={description} image={image} />
-      {/* <Header siteTitle={`neurosport` || data.site.siteMetadata?.title} /> */}
       <Header />
 
       <div className="content">

@@ -10,44 +10,46 @@ export default function Footer() {
   const footer_elements = [
     {
       label: "about",
-      link:'/about'
+      link: "/about",
     },
     {
       label: "Sklep",
-      link: '/shop',
+      link: "/shop",
     },
     {
       label: "Blog",
-      link: '/blog',
+      link: "/blog",
     },
     {
       label: "Program partnerski",
-      link: '/partner-program',
+      link: "/partner-program",
     },
-    
+
     {
       label: "FAQ",
-      link: '/faq',
+      link: "/faq",
     },
     {
       label: "Kontakt",
-      link: '/contact',
+      link: "/contact",
     },
   ]
 
   return (
     <footer className="footer">
       <div className="footer-menu-wrapper">
-          <ul className="footer-menu">
-        {footer_elements.map(elem => (
-          <li className="footer-item" key={elem.label}>
-            <Link to={elem.link} activeClassName="active">{elem.label}</Link>   
-          </li>
-        ))}
+        <ul className="footer-menu">
+          {footer_elements.map(elem => (
+            <li className="footer-item" key={elem.label}>
+              <Link to={elem.link} activeClassName="active">
+                {elem.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="copyrights">
-        <Logo size={'16px'} color={"grey"} />
+        <Logo size={"16px"} color={"grey"} />
 
         <div className="footer-date">© {new Date().getFullYear()}</div>
       </div>

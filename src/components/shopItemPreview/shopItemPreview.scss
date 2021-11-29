@@ -16,7 +16,7 @@
 
 .shop-item-preview-buttons {
   a {
-    padding: 15px 20px;
+    padding: 15px 40px;
     color: white;
     text-decoration: none;
     display: inline-block;
@@ -55,6 +55,10 @@
       transform: scale(1.1);
     }
   }
+}
+
+.shop-item-preview-description {
+  font-family: 'Roboto', sans-serif;
 }
 
 .shop-item-preview-description,

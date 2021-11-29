@@ -72,6 +72,12 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint: process.env.MAILCHIMP_ENDPOINT
+      }
+    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
