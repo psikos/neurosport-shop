@@ -8,21 +8,23 @@ export default function Newsletter() {
 
   const _handleSubmit = async (e, email) => {
     e.preventDefault()
-    const result = await addToMailchimp(email)
+    const {result,msg} = await addToMailchimp(email)
     // I recommend setting `result` to React state
     // but you can do whatever you want
-    console.log(email + " " + result)
+    // console.log(email + " " + JSON.stringify(result))
+    console.log(msg);
   }
 
   return (
     <div className="newsletter-wrapper">
+        <h3 className="newsletter-title">Chcesz wiedzieć więcej?</h3>
       <form
         onSubmit={e => _handleSubmit(e, email)}
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
         className="newsletter-form"
         target="_blank"
-        novalidate
+        noValidate
       >
         <div className="newsletter-form-content">
           <div className="form__group">
@@ -37,7 +39,9 @@ export default function Newsletter() {
               placeholder="Wprowadź adres email"
               required
             />
-            <label className="form__label" for="mce-EMAIL">Zapisz się do newslettera!</label>
+            <label className="form__label" htmlFor="mce-EMAIL">Wprowadź swój adres email</label>
+            <p className={email ? 'newsletter-private-policy active' : 'newsletter-private-policy'}>Wprowadzenie adresu email jest wyrażeniem zgody na otrzymywanie informacji o nowościach na stronie oraz zgodą na przetwarzanie danych osobowych do tych celów niezbędnych - zgodnie z polityką prywatności na stronie www.neurosport.pl</p>
+           
             {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
             <div
               style={{ position: "absolute", left: "-5000px" }}
@@ -46,8 +50,9 @@ export default function Newsletter() {
               <input
                 type="text"
                 name="b_c3e378d5e39709b979d4486a3_f95d8e5347"
-                tabindex="-1"
+                tabIndex="-1"
                 value=""
+                readOnly
               />
             </div>
           </div>
@@ -55,7 +60,8 @@ export default function Newsletter() {
             <div className="newsletter-button-wrapper">
               <input
                 type="submit"
-                value="Zapisz mnie!"
+                value="CHCĘ"
+                readOnly
                 name="subscribe"
                 id="mc-embedded-subscribe"
                 className="newsletter-button"
@@ -64,6 +70,7 @@ export default function Newsletter() {
           </div>
         </div>
       </form>
+      
     </div>
   )
 }
