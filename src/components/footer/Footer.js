@@ -4,8 +4,6 @@ import Logo from "../logo/Logo"
 
 import "./footer.css"
 
-//import blog from '../../pages/blog'
-
 export default function Footer() {
   const footer_elements = [
     {

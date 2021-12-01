@@ -10,7 +10,7 @@ export default function Newsletter() {
     e.preventDefault()
     const {result,msg} = await addToMailchimp(email)
     // I recommend setting `result` to React state
-    // but you can do whatever you want
+    // but you can do whatever you want 
     // console.log(email + " " + JSON.stringify(result))
     console.log(msg);
   }

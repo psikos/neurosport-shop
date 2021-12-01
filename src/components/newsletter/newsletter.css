@@ -124,14 +124,17 @@
   .form__group {
     margin-left: 22px;
   }
-  .form__field,
-  .newsletter-private-policy {
+  .form__field {
     width: 500px;
   }
   .newsletter-form-content {
     flex-direction: row;
   }
   .newsletter-private-policy {
+    width: 530px;
+    margin-top: 15px;
     align-self: start;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
   }
 }
