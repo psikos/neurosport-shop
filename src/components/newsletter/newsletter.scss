@@ -122,6 +122,7 @@ $gray: #9b9b9b;
     text-indent: 1rem;
     transform: scale(0);
     transition: transform .7s ease-in-out 1s;
+    margin-top: 15px;
 }
 
 .newsletter-private-policy.active {
@@ -148,7 +149,6 @@ $gray: #9b9b9b;
 
       .newsletter-private-policy {
           width: 530px;
-          margin-top: 15px;
           align-self: start;
           font-family: 'Roboto', sans-serif;
           text-align: center;
