@@ -1,0 +1,58 @@
+.private-policy-wrapper {
+  font-family: "Roboto", sans-serif;
+  color: var(--textColor);
+
+  h1,
+  h2 {
+    font-family: "Poppins", sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin: 40px 0;
+
+    span {
+      color: var(--mainColor);
+    }
+  }
+
+  h2 {
+    padding: 0 5%;
+  }
+}
+
+.private-policy-list,
+.private-policy-list-inside {
+  padding: 0 10%;
+  width: 80%;
+
+  li {
+    margin: 10px 0;
+
+    p {
+      line-height: 1.3rem;
+      color: var(--lighten20TextColor);
+
+      a {
+        text-decoration: none;
+        color: var(--lightenMainColor);
+    
+        &:hover {
+          color: var(--darkenMainColor);
+        }
+      }
+    }
+
+    &::marker {
+        color: var(--mainColor);
+    }
+  }
+
+ 
+}
+
+.private-policy-list-inside {
+  list-style: lower-alpha;
+}

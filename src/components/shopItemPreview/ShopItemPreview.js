@@ -21,7 +21,6 @@ export default function ShopItemPreview({ item }) {
           Kup teraz!
         </a>
       </div>
-      {/* {JSON.stringify(item.images)} */}
     </div>
   )
 }

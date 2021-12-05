@@ -1,0 +1,61 @@
+.private-policy-wrapper {
+  font-family: "Roboto", sans-serif;
+  color: var(--textColor);
+}
+
+.private-policy-wrapper h1,
+.private-policy-wrapper h2 {
+  font-family: "Poppins", sans-serif;
+}
+
+.private-policy-wrapper h1 {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  margin: 40px 0;
+}
+
+.private-policy-wrapper h1 span {
+  color: var(--mainColor);
+}
+
+.private-policy-wrapper h2 {
+  padding: 0 5%;
+}
+
+.private-policy-list,
+.private-policy-list-inside {
+  padding: 0 10%;
+  width: 80%;
+}
+
+.private-policy-list li,
+.private-policy-list-inside li {
+  margin: 10px 0;
+}
+
+.private-policy-list li p,
+.private-policy-list-inside li p {
+  line-height: 1.3rem;
+  color: var(--lighten20TextColor);
+}
+
+.private-policy-list li p a,
+.private-policy-list-inside li p a {
+  text-decoration: none;
+  color: var(--lightenMainColor);
+}
+
+.private-policy-list li p a:hover,
+.private-policy-list-inside li p a:hover {
+  color: var(--darkenMainColor);
+}
+
+.private-policy-list li::marker,
+.private-policy-list-inside li::marker {
+  color: var(--mainColor);
+}
+
+.private-policy-list-inside {
+  list-style: lower-alpha;
+}
