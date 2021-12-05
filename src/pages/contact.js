@@ -1,10 +1,11 @@
-import React from 'react'
-import Layout from '../components/layout'
+import React from "react"
+import Container from "../components/Container"
+import Layout from "../components/layout"
 
 export default function Contact() {
-    return (
-        <Layout title="Kontakt" description="Napisz do nas!">
-            This is contact page
-        </Layout>
-    )
+  return (
+    <Layout title="Kontakt" description="Napisz do nas!">
+      <Container>This is contact page</Container>
+    </Layout>
+  )
 }
