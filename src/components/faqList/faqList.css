@@ -1,3 +1,11 @@
 .faq-list-wrapper {
   padding: 5%;
 }
+
+a.underlined-link {
+  color: var(--lightenMainColor);
+}
+
+a.underlined-link:hover {
+  color: var(--darkenMainColor);
+}

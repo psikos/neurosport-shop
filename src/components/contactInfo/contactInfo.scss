@@ -1,0 +1,19 @@
+.contact-info-wrapper {
+  padding: 5%;
+  text-align: right;
+  color: var(--lighten20TextColor);
+}
+
+.contact-info-header-subtitle {
+  font-family: var(--mainFont);
+  margin: 1px 0 40px;
+}
+
+.contact-info-header-subtitle span {
+  color: var(--lightenMainColor);
+  cursor: copy;
+
+  &:hover {
+    color: var(--darkenMainColor);
+  }
+}

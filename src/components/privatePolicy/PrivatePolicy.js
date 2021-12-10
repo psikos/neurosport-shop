@@ -21,7 +21,7 @@ export default function PrivatePolicy() {
         <li>
           <p>
             Administratorem danych osobowych zawartych w serwisie jest
-            …………………………………….……. z siedzibą w …………………………………….. KRS………………...…..
+            Martyna Hursowicz z siedzibą na os. Stare Żegrze 177/1 w Poznaniu KRS………………...…..
             NIP……………..………….REGON……………………….…………......
           </p>
         </li>

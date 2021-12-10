@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
 :root {
-  --mainColor: #007A00;
+  --mainColor: #007a00;
   --lightenMainColor: #009400;
   --darkenMainColor: #006100;
   --textColor: #2f2b2c;
@@ -9,6 +9,8 @@
   --lightenTextColor: #988e91;
   --lighten20TextColor: #645c5e;
   --lightBackgroundColor: #edebec;
+  --mainFont: 'Roboto', sans-serif;
+  --headerFont: "Poppins", sans-serif;
 }
 
 * {
@@ -21,5 +23,11 @@
 
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--headerFont);
+}
+
+#gatsby-focus-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
