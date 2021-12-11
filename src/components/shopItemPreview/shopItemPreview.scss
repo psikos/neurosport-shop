@@ -1,11 +1,25 @@
 .shop-item-preview {
+  text-align: center;
   width: 370px;
   padding: 15px 5px;
+  
+  border: 1px solid var(--lightenMainColor);
+  margin: 0 auto;
+
+  &:hover {
+    background-color: var(--lightBackgroundColor);
+  }
+}
+
+.shop-item-preview-link-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid var(--lightenMainColor);
-  margin: 0 auto;
+  text-decoration: none;
+  color: var(--textColor);
+width: 100%;
+height: 100%;
+
 }
 
 .shop-item-preview,
@@ -24,10 +38,19 @@
 }
 
 .buy-now {
-  background-color: var(--darkenMainColor);
+  background-color: var(--lightenMainColor);
 
   &:hover {
-      background-color: var(--mainColor);
+    background-color: var(--darkenMainColor);
+  }
+}
+
+a.see-more {
+  margin-right: 5px;
+  background-color: var(--lightenTextColor);
+
+  &:hover {
+    background-color: var(--lightTextColor);
   }
 }
 
@@ -37,12 +60,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  position: relative;
   .gatsby-image-wrapper {
-    height: 100%; 
+    height: 100%;
   }
 
-  
+  &::before {
+    content: 'NOWOŚĆ!';
+    background-color: red;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+    font-weight: 600;
+  }
+
+  &::after {
+    content: 'ebook';
+    background: var(--lightenMainColor);
+    bottom: 10px;
+    left: 10px;
+  }
+
+  &::before,
+  &::after {
+    font-family: var(--mainFont);
+    color: white;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    display: block;
+    position: absolute;
+    padding: 3px 6px;
+  }
+
+ 
 }
 
 .shop-item-preview {
@@ -57,15 +107,30 @@
   }
 }
 
-.shop-item-preview-description {
-  font-family: 'Roboto', sans-serif;
+.shop-item-preview-description,
+.shop-item-price {
+  font-family: "Roboto", sans-serif;
 }
 
-.shop-item-preview-description,
-.shop-item-preview .image-wrapper {
+.shop-item-preview-description {
+  color: var(--lightenTextColor);
+}
+
+.shop-item-preview .image-wrapper,
+.shop-item-price {
   margin-bottom: 15px;
+}
+.shop-item-preview-description {
+  margin-bottom: 5px;
 }
 
 .shop-item-name {
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
+
+.shop-item-price {
+  font-weight: 600;
+  color: var(--textColor);
+}
+
+

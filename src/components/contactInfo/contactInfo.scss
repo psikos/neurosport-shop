@@ -6,12 +6,14 @@
 
 .contact-info-header-subtitle {
   font-family: var(--mainFont);
-  margin: 1px 0 40px;
+  margin: 1px -5px 40px 0;
 }
 
 .contact-info-header-subtitle span {
   color: var(--lightenMainColor);
   cursor: copy;
+  padding: 5px 5px 5px 0;
+  font-weight: 600;
 
   &:hover {
     color: var(--darkenMainColor);

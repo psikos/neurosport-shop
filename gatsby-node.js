@@ -6,6 +6,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           slug
         }
       }
+      allContentfulShopItem {
+        nodes {
+          slug
+        }
+      }
     }
   `)
 
@@ -19,6 +24,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: require.resolve("./src/templates/blog-post-template.js"),
       context: {
         slug: post.slug,
+      },
+    })
+  })
+
+  result.data.allContentfulShopItem.nodes.forEach(shopItem => {
+    actions.createPage({
+      path: `/shop/${shopItem.slug}/`,
+      component: require.resolve("./src/templates/shop-item-template.js"),
+      context: {
+        slug: shopItem.slug,
       },
     })
   })

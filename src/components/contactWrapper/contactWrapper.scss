@@ -2,9 +2,18 @@
   display: none;
 }
 
+.contact-info-title {
+  margin-top: 70px;
+}
+
+.contact-info-title:first-of-type {
+  margin-top: 50px;
+}
+
+
 @media screen and (min-width: 770px) {
   .contact-wrapper {
-      margin-top: 40px;
+    margin-top: 40px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -13,7 +22,7 @@
       position: relative;
     }
     .brain-wheel-background {
-        opacity: 10%;
+      opacity: 10%;
       width: 330px;
       height: 330px;
       display: block;
@@ -29,6 +38,10 @@
     .contact-form-thanks-wrapper {
       width: 80%;
     }
+  }
+
+  .contact-info-title:first-of-type {
+    margin-top: 0;
   }
 }
 

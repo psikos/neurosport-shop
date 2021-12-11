@@ -2,6 +2,14 @@
   display: none;
 }
 
+.contact-info-title {
+  margin-top: 70px;
+}
+
+.contact-info-title:first-of-type {
+  margin-top: 50px;
+}
+
 @media screen and (min-width: 770px) {
   .contact-wrapper {
     margin-top: 40px;
@@ -27,6 +35,9 @@
   .contact-wrapper .contact-form-wrapper,
   .contact-wrapper .contact-form-thanks-wrapper {
     width: 80%;
+  }
+  .contact-info-title:first-of-type {
+    margin-top: 0;
   }
 }
 
