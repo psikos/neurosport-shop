@@ -6,12 +6,12 @@ import { Link } from "gatsby"
 export default function ShopItemPreview({ item }) {
   return (
     <div className="shop-item-preview">
-      <Link className="shop-item-preview-link-wrapper" to="/shop/weganin-wiedziec-winien">
+      <Link
+        className="shop-item-preview-link-wrapper"
+        to="/shop/weganin-wiedziec-winien"
+      >
         <div>
-          <div
-            className="image-wrapper"
-            style={{ backgroundColor: "green" }}
-          >
+          <div className="image-wrapper" style={{ backgroundColor: "green" }}>
             <GatsbyImage
               image={getImage(item.images[0].gatsbyImageData)}
               alt={item.images[0].title}
@@ -21,16 +21,15 @@ export default function ShopItemPreview({ item }) {
           <p className="shop-item-preview-description">{item.description}</p>
           <p className="shop-item-price">{item.basePrice} zł</p>
         </div>
-
-        <div className="shop-item-preview-buttons">
-          <Link className="see-more" to="/shop/weganin-wiedziec-winien">
-            Zobacz więcej
-          </Link>
-          <a href={item.paymentLink} target="_blank" className="buy-now">
-            Kup teraz!
-          </a>
-        </div>
       </Link>
+      <div className="shop-item-preview-buttons">
+        <Link className="see-more" to="/shop/weganin-wiedziec-winien">
+          Zobacz więcej
+        </Link>
+        <a href={item.paymentLink} target="_blank" className="buy-now">
+          Kup teraz!
+        </a>
+      </div>
     </div>
   )
 }
