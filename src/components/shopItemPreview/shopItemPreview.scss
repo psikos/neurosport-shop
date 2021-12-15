@@ -35,22 +35,22 @@
     text-decoration: none;
     display: inline-block;
   }
-}
 
-.buy-now {
-  background-color: var(--lightenMainColor);
+  .buy-now {
+    background-color: var(--lightenMainColor);
 
-  &:hover {
-    background-color: var(--darkenMainColor);
+    &:hover {
+      background-color: var(--darkenMainColor);
+    }
   }
-}
 
-a.see-more {
-  margin-right: 5px;
-  background-color: var(--lightenTextColor);
+  a.see-more {
+    margin-right: 5px;
+    background-color: var(--lightenTextColor);
 
-  &:hover {
-    background-color: var(--lightTextColor);
+    &:hover {
+      background-color: var(--lightTextColor);
+    }
   }
 }
 

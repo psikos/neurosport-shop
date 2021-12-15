@@ -1,8 +1,9 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Container from "../components/Container"
+import ShopItemDescription from "../components/shopItemDescription/ShopItemDescription"
 
 export const query = graphql`
   query ($slug: String!) {
@@ -24,13 +25,28 @@ export const query = graphql`
       description
       category
       basePrice
+      benefitsOfReading
+      priceOptionsJson {
+        priceOptions {
+          price
+          option
+          payment_link
+        }
+      }
+      tableOfContents {
+        raw
+      }
     }
   }
 `
 
 const ShopItemTemplate = ({ data: { item } }) => {
   return (
-    <Layout title={"test"} description={"test"}>
+    <Layout
+      title={item.name}
+      description={item.description}
+    //   image={post.heroImage.fluid.src}
+    >
       <Container>
         <div className="shop-item-wrapper">
           <div className="shop-item-image-wrapper">
@@ -39,28 +55,7 @@ const ShopItemTemplate = ({ data: { item } }) => {
               alt={"description"}
             />
           </div>
-          <div className="shop-item-description-wrapper">
-            <h1>{item.name}</h1>
-            <div>
-              {item.category.map(category => (
-                <p>{category}</p>
-              ))}
-            </div>
-            <div>
-              {item.author.map(author => (
-                <p>{author.name}</p>
-              ))}
-            </div>
-            <div>
-              <div>PLN {item.basePrice}</div>
-              <div>select opcji zakupu - ebook / ebook+audiobook</div>
-            </div>
-            <div className="details-wrapper">
-              <div>{item.description}</div>
-              <div>additional info</div>
-            </div>
-          </div>
-          <a href={item.paymentLink}>Kup ebook</a>
+          <ShopItemDescription item={item} />
         </div>
       </Container>
     </Layout>

@@ -38,20 +38,20 @@
   display: inline-block;
 }
 
-.buy-now {
+.shop-item-preview-buttons .buy-now {
   background-color: var(--lightenMainColor);
 }
 
-.buy-now:hover {
+.shop-item-preview-buttons .buy-now:hover {
   background-color: var(--darkenMainColor);
 }
 
-a.see-more {
+.shop-item-preview-buttons a.see-more {
   margin-right: 5px;
   background-color: var(--lightenTextColor);
 }
 
-a.see-more:hover {
+.shop-item-preview-buttons a.see-more:hover {
   background-color: var(--lightTextColor);
 }
 
