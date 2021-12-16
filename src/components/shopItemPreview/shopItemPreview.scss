@@ -1,6 +1,11 @@
 .shop-item-preview {
   text-align: center;
   width: 370px;
+
+  @media (min-width: 1500px) {
+    width: 420px;
+  }
+
   padding: 15px 5px;
 
   border: 1px solid var(--lightenMainColor);
@@ -56,6 +61,11 @@
 
 .shop-item-preview .image-wrapper {
   width: 350px;
+
+  @media (min-width: 1500px) {
+    width: 400px;
+  }
+
   height: 340px;
   display: flex;
   justify-content: center;

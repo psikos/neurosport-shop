@@ -1,12 +1,14 @@
 .content-wrapper {
   width: 100%;
-  height: 340px;
+  height: 380px;
   position: relative;
   font-family: 'Roboto', sans-serif;
 }
 
 .recent-image-wrapper {
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .image {
@@ -21,6 +23,8 @@
   transform: translateY(-50%);
   margin-left: 8%;
   width: 40%;
+  display: flex;
+  justify-content: center;
 }
 
 .recent-content-wrapper {
@@ -127,5 +131,15 @@
     position: absolute;
     left: 0;
     top: 71%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .content-wrapper {
+    height: 500px;
+  }
+  .banner-subtitle::before {
+    height: 17px;
+    top: 73%;
   }
 }

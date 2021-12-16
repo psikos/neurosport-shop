@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 :root {
   --mainColor: #007a00;
   --lightenMainColor: #009400;
@@ -10,8 +11,15 @@
   --lighten20TextColor: #645c5e;
   --lightBackgroundColor: #edebec;
   --mainFont: 'Roboto', sans-serif;
+  --mainFontCondensed: 'Roboto Condensed', sans-serif;
   --headerFont: "Poppins", sans-serif;
   --boxShadow: 0 5px 20px rgba(44, 44, 44, 0.2);
+}
+
+@media (min-width: 1500px) {
+  :root {
+    font-size: 20px;
+  }
 }
 
 * {

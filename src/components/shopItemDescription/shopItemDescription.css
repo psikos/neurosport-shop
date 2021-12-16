@@ -144,12 +144,12 @@
   background-color: var(--darkenMainColor);
 }
 
-.details-wrapper {
+.shop-items-description-benefits-wrapper {
   color: var(--lighten20TextColor);
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
-.details-wrapper h3 {
+.shop-items-description-benefits-wrapper h3 {
   margin: 0.8rem 0;
 }
 

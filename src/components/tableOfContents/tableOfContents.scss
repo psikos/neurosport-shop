@@ -1,0 +1,24 @@
+.table-of-contents-wrapper {
+  padding: 5%;
+}
+
+.table-of-contents {
+    
+   li p{
+        font-family: var(--mainFontCondensed);
+        margin-bottom: 0.3rem;
+        font-size: 1.1rem;
+    }
+   
+
+    ol {
+       margin: 0 1rem; 
+       font-weight: 600;
+      }
+
+  ol li ol {
+    font-weight: 500;
+    color: var(--lighten20TextColor);
+    margin: 0 2rem;
+  }
+}

@@ -1,8 +1,11 @@
 import React, { useState } from "react"
 import { AiFillAudio } from "react-icons/ai"
 import { FiChevronLeft, FiChevronDown } from "react-icons/fi"
-import { GiCheckMark } from "react-icons/gi";
+import { GiCheckMark } from "react-icons/gi"
 import { MdTabletMac } from "react-icons/md"
+
+import ShopItemDetails from '../shopItemDetails/ShopItemDetails'
+
 import "./shopItemDescription.css"
 
 export default function ShopItemDescription({ item }) {
@@ -11,9 +14,10 @@ export default function ShopItemDescription({ item }) {
   const [price, setPrice] = useState(initialPricingState.price)
   const [option, setOption] = useState(initialPricingState.option)
   const [paymentLink, setPaymentLink] = useState(
-    initialPricingState.paymentLink
+    item.priceOptionsJson.priceOptions[0].payment_link
   )
   const [isSelecOpen, setIsSelecOpen] = useState(false)
+//   const [details, setDetails] = useState(initialState)
 
   const handleChangePricing = (e, i) => {
     if (!i && i !== 0) {
@@ -26,6 +30,8 @@ export default function ShopItemDescription({ item }) {
     setPaymentLink(item.priceOptionsJson.priceOptions[i].payment_link)
     console.log(item.priceOptionsJson.priceOptions[i].payment_link)
   }
+
+
 
   return (
     <>
@@ -105,14 +111,20 @@ export default function ShopItemDescription({ item }) {
             </select>
           </div>
         </div>
-        <div className="details-wrapper">
-            <h3>Między innymi dowiesz się jak:</h3>
+        <div className="shop-items-description-benefits-wrapper">
+          <h3>Między innymi dowiesz się jak:</h3>
           <ul className="shop-item-description-benefits-list">
             {item.benefitsOfReading.map(benefit => {
-              return <li key={benefit}><GiCheckMark />{benefit}</li>
+              return (
+                <li key={benefit}>
+                  <GiCheckMark />
+                  {benefit}
+                </li>
+              )
             })}
           </ul>
         </div>
+        <ShopItemDetails tableOfContents={item.tableOfContents} longDescription={''} details={''} /> 
       </div>
       <a className="shop-item-payment-button" href={paymentLink}>
         Kupuję za {price} zł
