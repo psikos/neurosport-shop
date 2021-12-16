@@ -1,5 +1,5 @@
-.table-of-contents-wrapper {
-  padding: 5%;
+.table-of-contents {
+  color: var(--textColor);
 }
 
 .table-of-contents li p {

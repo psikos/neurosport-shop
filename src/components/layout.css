@@ -10,8 +10,8 @@
   --lightenTextColor: #988e91;
   --lighten20TextColor: #645c5e;
   --lightBackgroundColor: #edebec;
-  --mainFont: 'Roboto', sans-serif;
-  --mainFontCondensed: 'Roboto Condensed', sans-serif;
+  --mainFont: "Roboto", sans-serif;
+  --mainFontCondensed: "Roboto Condensed", sans-serif;
   --headerFont: "Poppins", sans-serif;
   --boxShadow: 0 5px 20px rgba(44, 44, 44, 0.2);
   --hdWidth: 1600px;
@@ -55,4 +55,23 @@ body {
 
 option {
   padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--mainColor);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--darkenMainColor);
 }

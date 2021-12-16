@@ -1,5 +1,19 @@
 .shop-item-description-wrapper {
   padding: 5%;
+  /* Handle */
+  /* Handle on hover */
+}
+
+.shop-item-description-wrapper ::-webkit-scrollbar-track {
+  border-radius: 3px;
+}
+
+.shop-item-description-wrapper ::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+}
+
+.shop-item-description-wrapper ::-webkit-scrollbar-thumb:hover {
+  border-radius: 3px;
 }
 
 .shop-item-category-wrapper {
@@ -131,7 +145,7 @@
 
 .shop-item-payment-button {
   display: block;
-  margin: 5%;
+  margin: 0 5% 5%;
   text-align: center;
   padding: 20px 0;
   width: 90%;
