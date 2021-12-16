@@ -7,7 +7,7 @@
   margin: 0 auto;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1600px) {
   .shop-item-preview {
     width: 420px;
   }
@@ -70,7 +70,7 @@
   position: relative;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1600px) {
   .shop-item-preview .image-wrapper {
     width: 400px;
   }
@@ -121,6 +121,13 @@
 
 .shop-item-preview-description {
   color: var(--lightenTextColor);
+  width: 350px;
+}
+
+@media (min-width: 1600px) {
+  .shop-item-preview-description {
+    width: 400px;
+  }
 }
 
 .shop-item-preview .image-wrapper,

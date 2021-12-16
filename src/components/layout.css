@@ -14,9 +14,10 @@
   --mainFontCondensed: 'Roboto Condensed', sans-serif;
   --headerFont: "Poppins", sans-serif;
   --boxShadow: 0 5px 20px rgba(44, 44, 44, 0.2);
+  --hdWidth: 1600px;
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1600px) {
   :root {
     font-size: 20px;
   }
@@ -33,6 +34,17 @@
 body {
   margin: 0;
   font-family: var(--headerFont);
+}
+
+.fixed-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1600px) {
+  .fixed-container {
+    max-width: 1400px;
+  }
 }
 
 #gatsby-focus-wrapper {

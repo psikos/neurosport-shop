@@ -1,5 +1,7 @@
 import React from 'react'
 
-export default ({ children }) => (
-  <div className="fixed-container" style={{ maxWidth: 1180, margin: '0 auto' }}>{children}</div>
+const Container = ({ children }) => (
+  <div className="fixed-container" >{children}</div>
 )
+
+export default Container
