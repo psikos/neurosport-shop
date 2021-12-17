@@ -1,8 +1,12 @@
 .shop-item-image-wrapper {
-  max-height: 420px;
+  height: 440px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+.shop-item-image-wrapper .gatsby-image-wrapper {
+  height: 100%;
 }
 
 .shop-item-image-list {
@@ -11,7 +15,7 @@
 }
 
 .shop-item-image-list li {
-  max-height: 100px;
+  height: 100px;
   overflow: hidden;
   display: flex;
   position: relative;

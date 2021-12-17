@@ -7,7 +7,8 @@ export default function ShopItemImage({ images }) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
 
   return (
-    <div className="shop-item-image-wrapper">
+    <div className="shop-item-image">
+       
       <div className="shop-item-image-wrapper">
         <GatsbyImage
           image={getImage(images[selectedImageIndex].gatsbyImageData)}

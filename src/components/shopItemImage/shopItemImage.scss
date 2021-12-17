@@ -1,21 +1,30 @@
 .shop-item-image-wrapper {
-  max-height: 420px;
+  height: 440px;
   overflow: hidden;
+// overflow: scroll;
   display: flex;
   flex-direction: column;
+
+  .gatsby-image-wrapper {
+      height: 100%
+  }
+  .gatsby-image-wrapper.gatsby-image-wrapper-constrained img {
+    // object-fit: contain !important;
+  }
 }
 
 .shop-item-image-list {
   list-style: none;
   display: flex;
   li {
-    max-height: 100px;
+    height: 100px;
     overflow: hidden;
     display: flex;
     position: relative;
     cursor: pointer;
     .gatsby-image-wrapper.gatsby-image-wrapper-constrained img {
       transition: transform 0.3s ease-in-out;
+    //   object-fit: cover !important;
     }
 
     &:hover {
