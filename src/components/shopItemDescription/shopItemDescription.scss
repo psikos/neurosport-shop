@@ -36,12 +36,19 @@
 
   margin: 0 0.5rem 0 0;
 
+  &:hover {
+      background-color: var(--lighten20TextColor);
+  }
+
   &:last-of-type {
     margin-right: 0;
   }
 
   &.active-category {
     background-color: var(--mainColor);
+    &:hover {
+        background-color: var(--darkenMainColor);
+    }
   }
 
   span {
@@ -155,6 +162,7 @@
   color: white;
   background-color: var(--lightenMainColor);
   border-radius: 3px;
+  box-shadow: var(--boxShadow);
 
   &:hover {
     background-color: var(--darkenMainColor);

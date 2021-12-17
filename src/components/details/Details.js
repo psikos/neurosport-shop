@@ -1,8 +1,7 @@
 import React from "react"
-import './details.css'
+import "./details.css"
 
 export default function Details({ details }) {
-
   return (
     <div>
       <table className="details-table">

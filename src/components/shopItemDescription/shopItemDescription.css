@@ -35,12 +35,20 @@
   margin: 0 0.5rem 0 0;
 }
 
+.shop-item-category-item:hover {
+  background-color: var(--lighten20TextColor);
+}
+
 .shop-item-category-item:last-of-type {
   margin-right: 0;
 }
 
 .shop-item-category-item.active-category {
   background-color: var(--mainColor);
+}
+
+.shop-item-category-item.active-category:hover {
+  background-color: var(--darkenMainColor);
 }
 
 .shop-item-category-item span {
@@ -153,6 +161,7 @@
   color: white;
   background-color: var(--lightenMainColor);
   border-radius: 3px;
+  box-shadow: var(--boxShadow);
 }
 
 .shop-item-payment-button:hover {

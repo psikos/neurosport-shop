@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Container from "../components/Container"
 import ShopItemDescription from "../components/shopItemDescription/ShopItemDescription"
+import ShopItemImage from "../components/shopItemImage/ShopItemImage"
 
 export const query = graphql`
   query ($slug: String!) {
@@ -58,12 +59,7 @@ const ShopItemTemplate = ({ data: { item } }) => {
     >
       <Container>
         <div className="shop-item-wrapper">
-          <div className="shop-item-image-wrapper">
-            <GatsbyImage
-              image={getImage(item.images[0].gatsbyImageData)}
-              alt={"description"}
-            />
-          </div>
+          <ShopItemImage images={item.images} />
           <ShopItemDescription item={item} />
         </div>
       </Container>

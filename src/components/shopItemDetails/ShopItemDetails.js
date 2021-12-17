@@ -2,15 +2,14 @@ import React, { useState } from "react"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 import { AiOutlineOrderedList } from "react-icons/ai"
-import { BsFileText } from "react-icons/bs";
-import { CgMoreO } from "react-icons/cg";
+import { BsFileText } from "react-icons/bs"
+import { CgMoreO } from "react-icons/cg"
 
 import TableOfContents from "../tableOfContents/TableOfContents"
 import LongDescription from "../longDescription/LongDescription"
-import Details from "../details/Details";
+import Details from "../details/Details"
 
 import "./shopItemDetails.css"
-
 
 const details_items = [
   { label: "Spis treści", icon: <AiOutlineOrderedList /> },
