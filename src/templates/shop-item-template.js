@@ -33,8 +33,17 @@ export const query = graphql`
           payment_link
         }
       }
+      longDescription {
+        raw
+      }
       tableOfContents {
         raw
+      }
+      detailsJson {
+        fieldsUtils {
+          label
+          value
+        }
       }
     }
   }
@@ -45,7 +54,7 @@ const ShopItemTemplate = ({ data: { item } }) => {
     <Layout
       title={item.name}
       description={item.description}
-    //   image={post.heroImage.fluid.src}
+      //   image={post.heroImage.fluid.src}
     >
       <Container>
         <div className="shop-item-wrapper">

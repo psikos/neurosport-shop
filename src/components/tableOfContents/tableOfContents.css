@@ -1,5 +1,6 @@
 .table-of-contents {
   color: var(--textColor);
+  padding: 2% 0;
 }
 
 .table-of-contents li p {

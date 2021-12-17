@@ -35,7 +35,16 @@
 .post-renderer h3,
 .post-renderer h4,
 .post-renderer h5 {
+  margin-top: 0.33rem;
   padding: 5px 0;
+}
+
+.post-renderer h1:nth-child(1),
+.post-renderer h2:nth-child(1),
+.post-renderer h3:nth-child(1),
+.post-renderer h4:nth-child(1),
+.post-renderer h5:nth-child(1) {
+  margin-top: 0;
 }
 
 .post-renderer h6 {

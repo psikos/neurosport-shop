@@ -36,7 +36,12 @@ ul li{
   h3,
   h4,
   h5 {
+    margin-top: 0.33rem;
     padding: 5px 0;
+
+    &:nth-child(1) {
+      margin-top: 0;
+    }
   }
 
   h6 {

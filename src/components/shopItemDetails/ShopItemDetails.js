@@ -6,9 +6,11 @@ import { BsFileText } from "react-icons/bs";
 import { CgMoreO } from "react-icons/cg";
 
 import TableOfContents from "../tableOfContents/TableOfContents"
+import LongDescription from "../longDescription/LongDescription"
+import Details from "../details/Details";
 
 import "./shopItemDetails.css"
-import LongDescription from "../longDescription/LongDescription"
+
 
 const details_items = [
   { label: "Spis treści", icon: <AiOutlineOrderedList /> },
@@ -23,6 +25,7 @@ export default function ShopItemDetails({
 }) {
   const [selectedMenuItemIndex, setSelectedMenuItemIndex] = useState(0)
   const tableOfContentOutput = renderRichText(tableOfContents)
+  const longDescriptionOutput = renderRichText(longDescription)
 
   const renderSwitch = param => {
     switch (param) {
@@ -30,10 +33,10 @@ export default function ShopItemDetails({
         return <TableOfContents tableOfContents={tableOfContentOutput} />
         break
       case 1:
-        return <LongDescription />
+        return <LongDescription longDescription={longDescriptionOutput} />
         break
       case 2:
-        return "szczegóły"
+        return <Details details={details} />
         break
     }
   }

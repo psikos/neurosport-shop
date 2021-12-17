@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function LongDescription() {
+export default function LongDescription({longDescription}) {
     return (
-        <div>
-            this is long description
+        <div className="post-renderer">
+            {longDescription}
         </div>
     )
 }

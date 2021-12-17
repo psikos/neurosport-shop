@@ -1,0 +1,10 @@
+.details-table {
+    color: var(--textColor);
+    td {
+        padding: 5px;
+
+        &:first-of-type {
+            color: var(--lightenTextColor);
+        }
+    }
+}

@@ -4,7 +4,7 @@ import { FiChevronLeft, FiChevronDown } from "react-icons/fi"
 import { GiCheckMark } from "react-icons/gi"
 import { MdTabletMac } from "react-icons/md"
 
-import ShopItemDetails from '../shopItemDetails/ShopItemDetails'
+import ShopItemDetails from "../shopItemDetails/ShopItemDetails"
 
 import "./shopItemDescription.css"
 
@@ -17,7 +17,7 @@ export default function ShopItemDescription({ item }) {
     item.priceOptionsJson.priceOptions[0].payment_link
   )
   const [isSelecOpen, setIsSelecOpen] = useState(false)
-//   const [details, setDetails] = useState(initialState)
+  //   const [details, setDetails] = useState(initialState)
 
   const handleChangePricing = (e, i) => {
     if (!i && i !== 0) {
@@ -30,8 +30,6 @@ export default function ShopItemDescription({ item }) {
     setPaymentLink(item.priceOptionsJson.priceOptions[i].payment_link)
     console.log(item.priceOptionsJson.priceOptions[i].payment_link)
   }
-
-
 
   return (
     <>
@@ -124,7 +122,11 @@ export default function ShopItemDescription({ item }) {
             })}
           </ul>
         </div>
-        <ShopItemDetails tableOfContents={item.tableOfContents} longDescription={''} details={''} /> 
+        <ShopItemDetails
+          tableOfContents={item.tableOfContents}
+          longDescription={item.longDescription}
+          details={item.detailsJson.fieldsUtils}
+        />
       </div>
       <a className="shop-item-payment-button" href={paymentLink}>
         Kupuję za {price} zł
