@@ -20,6 +20,7 @@
   .shop-item-description-wrapper {
     height: calc(100vh - 192px);
     overflow-y: scroll;
+    width: 150%;
   }
 }
 

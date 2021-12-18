@@ -3,6 +3,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 import "./recent.css"
+import { Link } from "gatsby"
 
 export default function Recent() {
   return (
@@ -33,7 +34,7 @@ export default function Recent() {
 
           <div className="banner-button-wrapper">
             <span>
-              <a href="#"></a>
+              <Link to='/shop/weganin-wiedziec-winien' />
             </span>
           </div>
         </div>

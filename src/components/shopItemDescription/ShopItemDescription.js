@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+
 import { AiFillAudio } from "react-icons/ai"
 import { FiChevronLeft, FiChevronDown } from "react-icons/fi"
 import { GiCheckMark } from "react-icons/gi"
@@ -7,6 +8,7 @@ import { MdTabletMac } from "react-icons/md"
 import ShopItemDetails from "../shopItemDetails/ShopItemDetails"
 
 import "./shopItemDescription.css"
+import PaymentType from "../paymentType/PaymentType"
 
 export default function ShopItemDescription({ item }) {
   const [optionIndex, setOptionIndex] = useState(0)
@@ -128,10 +130,10 @@ export default function ShopItemDescription({ item }) {
           details={item.detailsJson.fieldsUtils}
         />
         <a className="shop-item-payment-button" href={paymentLink}>
-        Kupuję za {price} zł
-      </a>
+          Kupuję za {price} zł
+        </a>
+        <PaymentType />
       </div>
-      
     </>
   )
 }
