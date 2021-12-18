@@ -17,16 +17,16 @@ export default function ShopItemImage({ images }) {
       </div>
       <ul className="shop-item-image-list">
         {images.map((image, index) => {
-          if (index !== selectedImageIndex) {
+        //   if (index !== selectedImageIndex) {
             return (
-              <li onClick={e => setSelectedImageIndex(index)}>
+              <li className={selectedImageIndex === index ? 'chosen-pic' : ''} onClick={e => setSelectedImageIndex(index)}>
                 <GatsbyImage
                   image={getImage(image.gatsbyImageData)}
                   alt={"description"}
                 />
               </li>
             )
-          }
+        //   }
         })}
       </ul>
     </div>
