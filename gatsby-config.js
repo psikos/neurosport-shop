@@ -64,6 +64,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: contentfulConfig,
       forceFullSync: true,
+      downloadLocal: true,
     },
     {
       resolve: `gatsby-source-filesystem`,
