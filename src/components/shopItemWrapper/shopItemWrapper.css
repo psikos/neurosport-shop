@@ -1,0 +1,5 @@
+@media (min-width: 950px) {
+  .shop-item-wrapper {
+    display: flex;
+  }
+}

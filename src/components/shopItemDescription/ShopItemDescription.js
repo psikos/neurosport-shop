@@ -127,10 +127,11 @@ export default function ShopItemDescription({ item }) {
           longDescription={item.longDescription}
           details={item.detailsJson.fieldsUtils}
         />
-      </div>
-      <a className="shop-item-payment-button" href={paymentLink}>
+        <a className="shop-item-payment-button" href={paymentLink}>
         Kupuję za {price} zł
       </a>
+      </div>
+      
     </>
   )
 }

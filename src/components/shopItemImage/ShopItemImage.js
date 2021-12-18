@@ -8,7 +8,6 @@ export default function ShopItemImage({ images }) {
 
   return (
     <div className="shop-item-image">
-       
       <div className="shop-item-image-wrapper">
         <GatsbyImage
           image={getImage(images[selectedImageIndex].gatsbyImageData)}
@@ -17,16 +16,17 @@ export default function ShopItemImage({ images }) {
       </div>
       <ul className="shop-item-image-list">
         {images.map((image, index) => {
-        //   if (index !== selectedImageIndex) {
-            return (
-              <li className={selectedImageIndex === index ? 'chosen-pic' : ''} onClick={e => setSelectedImageIndex(index)}>
-                <GatsbyImage
-                  image={getImage(image.gatsbyImageData)}
-                  alt={"description"}
-                />
-              </li>
-            )
-        //   }
+          return (
+            <li
+              className={selectedImageIndex === index ? "chosen-pic" : ""}
+              onClick={e => setSelectedImageIndex(index)}
+            >
+              <GatsbyImage
+                image={getImage(image.gatsbyImageData)}
+                alt={"description"}
+              />
+            </li>
+          )
         })}
       </ul>
     </div>

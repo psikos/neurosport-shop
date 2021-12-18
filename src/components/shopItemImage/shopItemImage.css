@@ -1,8 +1,34 @@
+@media (min-width: 950px) {
+  .test {
+    position: fixed;
+    bottom: 5px;
+  }
+}
+
+@media (min-width: 650px) {
+  .shop-item-image {
+    display: flex;
+  }
+}
+
+@media (min-width: 950px) {
+  .shop-item-image {
+    display: initial;
+    width: 100%;
+  }
+}
+
 .shop-item-image-wrapper {
   height: 440px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 950px) {
+  .shop-item-image-wrapper {
+    height: calc(100vh - 192px);
+  }
 }
 
 .shop-item-image-wrapper .gatsby-image-wrapper {
@@ -14,12 +40,31 @@
   display: flex;
 }
 
+@media (min-width: 650px) {
+  .shop-item-image-list {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 950px) {
+  .shop-item-image-list {
+    flex-direction: row;
+  }
+}
+
 .shop-item-image-list li {
   height: 100px;
   overflow: hidden;
   display: flex;
   position: relative;
   cursor: pointer;
+}
+
+@media (min-width: 650px) {
+  .shop-item-image-list li {
+    height: 110px;
+    width: 130px;
+  }
 }
 
 .shop-item-image-list li .gatsby-image-wrapper.gatsby-image-wrapper-constrained img {

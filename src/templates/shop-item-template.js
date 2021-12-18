@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Container from "../components/Container"
-import ShopItemDescription from "../components/shopItemDescription/ShopItemDescription"
-import ShopItemImage from "../components/shopItemImage/ShopItemImage"
+
+import ShopItemWrapper from "../components/shopItemWrapper/ShopItemWrapper"
 
 export const query = graphql`
   query ($slug: String!) {
@@ -58,10 +57,7 @@ const ShopItemTemplate = ({ data: { item } }) => {
       //   image={post.heroImage.fluid.src}
     >
       <Container>
-        <div className="shop-item-wrapper">
-          <ShopItemImage images={item.images} />
-          <ShopItemDescription item={item} />
-        </div>
+        <ShopItemWrapper item={item} />
       </Container>
     </Layout>
   )
