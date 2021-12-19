@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Container from "../components/Container"
 
@@ -60,6 +60,7 @@ const ShopItemTemplate = ({ data: { item } }) => {
       image={item.images[0].fluid.src}
     >
       <Container>
+      <Link className="go-back-link" to="/shop">Powrót</Link>
         <ShopItemWrapper item={item} />
       </Container>
     </Layout>

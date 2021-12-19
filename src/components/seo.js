@@ -41,7 +41,7 @@ function Seo({ description, lang, meta, title ,image}) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: `NEUROSPORT | ${title}`,
         },
         {
           property: `og:description`,

@@ -25,13 +25,16 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: `NEUROSPORT`,
-    description: `Description of a Neurosport`,
+    description: `Naukowa wiedza w przystępnej formie`,
     author: `@psikos`,
     siteUrl: `https://neurosport.netlify.app`,
     image: '/images/recent_w1280.jpg',
   },
   flags: {
-    PARALLEL_QUERY_RUNNING: true
+    PARALLEL_QUERY_RUNNING: true,
+    PRESERVE_FILE_DOWNLOAD_CACHE: true,
+    DEV_WEBPACK_CACHE: true,
+    PARALLEL_SOURCING: true,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

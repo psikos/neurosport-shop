@@ -7,7 +7,7 @@ export default function Faq() {
   return (
     <Layout title="FAQ" description="Najczęściej zadawane pytania">
       <Container>
-       <FaqList />
+        <FaqList />
       </Container>
     </Layout>
   )

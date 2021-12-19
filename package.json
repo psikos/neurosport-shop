@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "neurosport",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Description of a NEUROSPORT",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Mikołaj Szymański <szymikolaj@gmail.com>",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.6.2",
     "@formspree/react": "^2.2.4",

@@ -1,6 +1,8 @@
 $color: var(--mainColor);
 
 .nav-list{
+
+
     list-style: none;
     display: flex;
     justify-content: center;
@@ -13,23 +15,33 @@ $color: var(--mainColor);
 }
 
 .nav-item {
-    margin: 5px;
-}
-
-.nav-item {
     
     text-transform: uppercase;
-    padding: 5px;
+    padding: 0.33rem;
+    margin: 0.5rem ;
     
     font-weight: 600;
 
     a {
         text-decoration: none;
-        color: var(--textColor);
+        color: var(--lighten20TextColor);
+        position: relative;
+        i {
+            position: absolute;
+            font-size: 0.8rem;
+            top: 50%;
+            left: -1rem;
+            transform: translateY(-36%);
+            opacity: 50%;
+        }
     }
 
     .active {
-        color: var(--mainColor);
+        color: var(--lightenMainColor);
+
+        &:hover {
+            color: var(--darkenMainColor);
+        }
     }
 
     a:hover {

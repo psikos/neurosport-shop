@@ -1,6 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import { AiFillHome } from "react-icons/ai";
+
 import './navigation.css'
 
 export default function Navigation() {
@@ -8,7 +10,7 @@ export default function Navigation() {
     <nav className="nav">
       <ul className="nav-list">
         <li className="nav-item">
-          <Link to="/"  activeClassName="active">home</Link>
+          <Link to="/"  activeClassName="active"><i><AiFillHome/></i><span>home</span></Link>
         </li>
         <li className="nav-item">
           <Link to="/shop"  activeClassName="active">sklep</Link>

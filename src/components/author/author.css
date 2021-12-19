@@ -60,14 +60,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
   }
   .author .author-image-wrapper {
+    align-items: center;
     margin-left: 10%;
   }
   .author-content-wrapper {
     padding: 0px 20% 0 10px;
-  }
-  .author-image-wrapper .radius-holder {
-    width: 70%;
   }
 }
