@@ -6,8 +6,9 @@ import "./blogPostFooter.css"
 export default function BlogPostFooter({ url, sources }) {
   return (
     <footer className="blog-post-footer">
-      <h4>Źródła:</h4>
-      <BlogPostSources sources={sources} />
+      
+      {sources && <BlogPostSources sources={sources} />}
+      
       <ShareButtons url={url} />
     </footer>
   )

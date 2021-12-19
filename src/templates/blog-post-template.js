@@ -65,6 +65,9 @@ const BlogPostTemplate = ({ data: { post } }) => {
     },
   }
 
+  let sources = []
+  post.sources && (sources = post.sources.sources)
+
   const output = renderRichText(post.bodyRichText, options)
 
   return (
@@ -77,7 +80,10 @@ const BlogPostTemplate = ({ data: { post } }) => {
         <BlogPostHeader title={post.title} author={post.author} />
 
         <BlogPostRenderer output={output} />
-        <BlogPostFooter url={'google.com'} sources={post.sources.sources}/>
+        <BlogPostFooter
+          url={"http://google.com"}
+          sources={sources}
+        />
       </Container>
     </Layout>
   )
