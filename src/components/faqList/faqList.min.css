@@ -1,1 +1,1 @@
-.faq-list-wrapper{padding:5%}a.underlined-link{color:var(--lightenMainColor)}a.underlined-link:hover{color:var(--darkenMainColor)}
+.faq-list-wrapper{padding:5%}.faq-list-wrapper ul{list-style:none}.faq-list-wrapper ul li{margin:1rem 0}a.underlined-link{color:var(--lightenMainColor)}a.underlined-link:hover{color:var(--darkenMainColor)}

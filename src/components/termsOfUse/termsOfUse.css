@@ -1,0 +1,13 @@
+.terms-of-use-renderer {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.terms-of-use-renderer ul, .terms-of-use-renderer ol li {
+  padding: 0 1rem;
+  line-height: 1.5rem;
+}
+
+.terms-of-use-renderer h2 {
+  margin: 2rem 0 1rem;
+}

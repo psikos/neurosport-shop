@@ -21,6 +21,9 @@ export const query = graphql`
       name
       images {
         gatsbyImageData
+        fluid {
+          src
+        }
       }
       description
       category
@@ -54,7 +57,7 @@ const ShopItemTemplate = ({ data: { item } }) => {
     <Layout
       title={item.name}
       description={item.description}
-      //   image={post.heroImage.fluid.src}
+      image={item.images[0].fluid.src}
     >
       <Container>
         <ShopItemWrapper item={item} />

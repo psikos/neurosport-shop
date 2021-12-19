@@ -1,5 +1,13 @@
 .faq-list-wrapper {
     padding: 5%;
+
+    ul {
+        list-style: none;
+
+        li {
+            margin: 1rem 0;
+        }
+    }
 }
 
 a.underlined-link {

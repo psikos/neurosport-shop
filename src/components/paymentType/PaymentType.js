@@ -8,8 +8,8 @@ export default function PaymentType() {
     <div className="payment-type">
       <div className="payment-image">
         <StaticImage
-          src="..\..\images\easycart-logo.png"
-          // src="https://raw.githubusercontent.com/psikos/neurosport-shop/main/src/images/recent_w2560.jpg"
+        //   src="..\..\images\easycart-logo.png"
+          src="https://raw.githubusercontent.com/psikos/neurosport-shop/main/src/images/easycart-logo.png"
           alt="EasyCart logo"
           className="image"
         />
