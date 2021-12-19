@@ -1,0 +1,19 @@
+.blog-post-sources-list {
+    list-style: inside;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    color: var(--lighten20TextColor);
+
+    li {
+        margin: 0.4rem 0;
+
+        a {
+            text-decoration: none;
+            color: var(--lightenMainColor);
+        
+            &:hover {
+              color: var(--darkenMainColor);
+            }
+          }
+    }
+}

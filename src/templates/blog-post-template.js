@@ -8,6 +8,7 @@ import Layout from "../components/layout"
 import Container from "../components/Container"
 import BlogPostRenderer from "../components/blogPostRenderer/BlogPostRenderer"
 import BlogPostHeader from "../components/blogPostHeader/BlogPostHeader"
+import BlogPostFooter from "../components/blogPostFooter/BlogPostFooter"
 
 export const query = graphql`
   query ($slug: String!) {
@@ -41,6 +42,13 @@ export const query = graphql`
           }
         }
       }
+      sources {
+        sources {
+          label
+          link
+          linkLabel
+        }
+      }
     }
   }
 `
@@ -60,11 +68,16 @@ const BlogPostTemplate = ({ data: { post } }) => {
   const output = renderRichText(post.bodyRichText, options)
 
   return (
-    <Layout title={post.title} description={post.description.description} image={post.heroImage.fluid.src}>
+    <Layout
+      title={post.title}
+      description={post.description.description}
+      image={post.heroImage.fluid.src}
+    >
       <Container>
         <BlogPostHeader title={post.title} author={post.author} />
 
         <BlogPostRenderer output={output} />
+        <BlogPostFooter url={'google.com'} sources={post.sources.sources}/>
       </Container>
     </Layout>
   )
