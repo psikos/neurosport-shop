@@ -1,5 +1,6 @@
 import React from "react"
 import { useForm, ValidationError } from "@formspree/react"
+import { FiMail } from "react-icons/fi"
 
 import "./contactForm.css"
 
@@ -17,7 +18,9 @@ function ContactForm() {
   }
   return (
     <div className="contact-form-wrapper">
-      <h1 className="contact-form-header">Skontaktuj się z nami</h1>
+      <h1 className="contact-form-header">
+        <span>Skontaktuj się z nami <i><FiMail /></i></span> 
+      </h1>
       <form className="contact-form" onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
         <input

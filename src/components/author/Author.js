@@ -15,6 +15,12 @@ export default function Author({ author }) {
           image.style.filter = "none"
           image.style.opacity = "100%"
         }}
+        onFocus={() => {
+          const image = document.querySelector(".image")
+          image.style.filter = "none"
+          image.style.opacity = "100%"
+        }}
+        role="button"
       >
         <div className="author-image-wrapper">
           <div className="radius-holder">

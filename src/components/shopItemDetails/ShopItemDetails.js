@@ -22,7 +22,7 @@ export default function ShopItemDetails({
   longDescription,
   details,
 }) {
-  const [selectedMenuItemIndex, setSelectedMenuItemIndex] = useState(0)
+  const [selectedMenuItemIndex, setSelectedMenuItemIndex] = useState(1)
   const tableOfContentOutput = renderRichText(tableOfContents)
   const longDescriptionOutput = renderRichText(longDescription)
 
@@ -30,13 +30,10 @@ export default function ShopItemDetails({
     switch (param) {
       case 0:
         return <TableOfContents tableOfContents={tableOfContentOutput} />
-        break
       case 1:
         return <LongDescription longDescription={longDescriptionOutput} />
-        break
       case 2:
         return <Details details={details} />
-        break
     }
   }
 
@@ -48,6 +45,7 @@ export default function ShopItemDetails({
             <li
               className={selectedMenuItemIndex === index ? "active" : ""}
               onClick={e => setSelectedMenuItemIndex(index)}
+              role="button"
             >
               <i>{item.icon}</i>
               <span>{item.label}</span>

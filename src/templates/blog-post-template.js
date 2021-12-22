@@ -70,6 +70,8 @@ const BlogPostTemplate = ({ data: { post } }) => {
 
   const output = renderRichText(post.bodyRichText, options)
 
+  const url = `http://neurosport.pl/blog/${post.slug}`
+
   return (
     <Layout
       title={post.title}
@@ -81,7 +83,7 @@ const BlogPostTemplate = ({ data: { post } }) => {
 
         <BlogPostRenderer output={output} />
         <BlogPostFooter
-          url={"http://google.com"}
+          url={url}
           sources={sources}
         />
       </Container>

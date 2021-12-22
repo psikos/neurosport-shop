@@ -20,6 +20,8 @@ export default function ShopItemImage({ images }) {
             <li
               className={selectedImageIndex === index ? "chosen-pic" : ""}
               onClick={e => setSelectedImageIndex(index)}
+              onKeyDown={e => setSelectedImageIndex(index)}
+              role="button"
             >
               <GatsbyImage
                 image={getImage(image.gatsbyImageData)}

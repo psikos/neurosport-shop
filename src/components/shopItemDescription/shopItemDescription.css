@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .shop-item-description-wrapper {
   padding: 5%;
   /* Handle */
@@ -53,10 +54,27 @@
 
 .shop-item-category-item.active-category {
   background-color: var(--mainColor);
+  position: relative;
 }
 
 .shop-item-category-item.active-category:hover {
   background-color: var(--darkenMainColor);
+}
+
+.shop-item-category-item.active-category.audiobook::after {
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding: 0.3rem;
+  letter-spacing: initial;
+  position: absolute;
+  content: 'PRZEDSPRZEDAŻ!';
+  color: white;
+  background-color: red;
+  border-radius: 2px;
+  bottom: -70%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: var(--boxShadow);
 }
 
 .shop-item-category-item span {
@@ -132,6 +150,12 @@
   border-radius: 3px;
 }
 
+@media (min-width: 1600px) {
+  .shop-item-description-select {
+    width: 330px;
+  }
+}
+
 .select-icon {
   display: flex;
   align-items: center;
@@ -174,6 +198,7 @@
 
 .shop-item-payment-button:hover {
   background-color: var(--darkenMainColor);
+  color: white;
 }
 
 .shop-items-description-benefits-wrapper {
@@ -196,4 +221,10 @@
 .shop-item-description-benefits-list li svg {
   color: var(--lightenMainColor);
   font-size: 2rem;
+}
+
+.shop-item-price-info {
+  display: block;
+  font-family: var(--mainFont);
+  font-size: 0.9rem;
 }

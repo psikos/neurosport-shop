@@ -19,7 +19,6 @@ export default function ShopItemDescription({ item }) {
     item.priceOptionsJson.priceOptions[0].payment_link
   )
   const [isSelecOpen, setIsSelecOpen] = useState(false)
-  //   const [details, setDetails] = useState(initialState)
 
   const handleChangePricing = (e, i) => {
     if (!i && i !== 0) {
@@ -63,10 +62,14 @@ export default function ShopItemDescription({ item }) {
 
             return (
               <p
-                className={shop_item_category}
+                className={`${shop_item_category} ${category==='audiobook' && 'audiobook'}`}
                 onClick={e => {
                   handleChangePricing(e, index)
                 }}
+                onKeyDown={e => {
+                  handleChangePricing(e, index)
+                }}
+                role="button"
               >
                 <span>
                   {category}
@@ -110,6 +113,14 @@ export default function ShopItemDescription({ item }) {
               })}
             </select>
           </div>
+        </div>
+        <div
+          className={optionIndex === 1 ? "shop-item-price-info" : "non-visible"}
+        >
+          Obecnie prowadzona jest przedsprzedaż audiobooka w promocyjnej cenie{" "}
+          {price} - oznacza to, że wybierając opcję {option}, <b>audiobook zostanie
+          udostępniony odrazu po jego nagraniu</b>. Nagranie planowane jest na
+          styczeń 2022.
         </div>
         <div className="shop-items-description-benefits-wrapper">
           <h3>Między innymi dowiesz się jak:</h3>

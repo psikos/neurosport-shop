@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Container from "../components/Container"
 
 import ShopItemWrapper from "../components/shopItemWrapper/ShopItemWrapper"
+import ShareButtons from "../components/shareButtons/ShareButtons"
 
 export const query = graphql`
   query ($slug: String!) {
@@ -53,6 +54,8 @@ export const query = graphql`
 `
 
 const ShopItemTemplate = ({ data: { item } }) => {
+  const url = `http://neurosport.pl/shop/${item.slug}`
+
   return (
     <Layout
       title={item.name}
@@ -60,8 +63,12 @@ const ShopItemTemplate = ({ data: { item } }) => {
       image={item.images[0].fluid.src}
     >
       <Container>
-      <Link className="go-back-link" to="/shop">Powrót</Link>
+        <Link className="go-back-link" to="/shop">
+          Powrót
+        </Link>
+
         <ShopItemWrapper item={item} />
+        <ShareButtons url={url} />
       </Container>
     </Layout>
   )

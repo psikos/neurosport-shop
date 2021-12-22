@@ -8,7 +8,13 @@ import RecentArticles from "../components/recentArticles/RecentArticles"
 import Newsletter from "../components/newsletter/Newsletter"
 
 const IndexPage = ({ data: { posts } }) => (
-  <Layout title={"NEUROSPORT"}>
+  <Layout
+    title={"NEUROSPORT"}
+    description={"Naukowa wiedza w przystępnej formie"}
+    image={
+      "https://raw.githubusercontent.com/psikos/neurosport-shop/main/src/images/recent_w2560.jpg"
+    }
+  >
     <Recent />
     <RecentArticles posts={posts.nodes} />
     <Newsletter />

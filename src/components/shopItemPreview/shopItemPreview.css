@@ -27,6 +27,10 @@
   height: 100%;
 }
 
+.shop-item-preview-link-wrapper:hover {
+  color: var(--textColor);
+}
+
 .shop-item-preview,
 .shop-item-preview-buttons a,
 .shop-item-preview .image-wrapper {

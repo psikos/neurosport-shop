@@ -90,3 +90,16 @@ option {
     color: var(--darkenMainColor);
   }
 }
+
+.non-visible {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--lightenMainColor);
+
+  &:hover {
+    color: var(--darkenMainColor);
+  }
+}

@@ -87,3 +87,16 @@ option {
 .go-back-link:hover {
   color: var(--darkenMainColor);
 }
+
+.non-visible {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--lightenMainColor);
+}
+
+a:hover {
+  color: var(--darkenMainColor);
+}

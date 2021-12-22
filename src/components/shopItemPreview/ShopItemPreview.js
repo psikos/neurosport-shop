@@ -4,6 +4,7 @@ import "./shopItemPreview.css"
 import { Link } from "gatsby"
 
 export default function ShopItemPreview({ item }) {
+  // console.log(item)
   return (
     <div className="shop-item-preview">
       <Link
@@ -26,7 +27,13 @@ export default function ShopItemPreview({ item }) {
         <Link className="see-more" to="/shop/weganin-wiedziec-winien">
           Zobacz więcej
         </Link>
-        <a href={item.paymentLink} target="_blank" className="buy-now">
+        <a
+          href={item.priceOptionsJson.priceOptions[0].payment_link}
+          target="_blank"
+          rel="noreferrer"
+          className="buy-now"
+          role="button"
+        >
           Kup teraz!
         </a>
       </div>

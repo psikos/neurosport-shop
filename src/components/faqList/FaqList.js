@@ -16,7 +16,7 @@ export default function FaqList() {
           </p>
         </li>
         <li>
-          <h2>Gdzie znajdę Regulmin sklepu?</h2>
+          <h2>Gdzie znajdę Regulamin sklepu?</h2>
           <p>
             Regulamin sklemu jest dostępny w tym{" "}
             <Link className="underlined-link" to="/terms-of-use">
