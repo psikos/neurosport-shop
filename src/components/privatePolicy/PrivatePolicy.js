@@ -15,14 +15,14 @@ export default function PrivatePolicy() {
           <p>
             Niniejsza Polityka Prywatności określa zasady przetwarzania i
             ochrony danych osobowych przekazanych przez Użytkowników w związku z
-            korzystaniem przez nich usług …………………………… poprzez Serwis.
+            korzystaniem przez nich usług NEUROSPORT poprzez Serwis.
           </p>
         </li>
         <li>
           <p>
             Administratorem danych osobowych zawartych w serwisie jest
             Martyna Hursowicz z siedzibą na os. Stare Żegrze 177/1 w Poznaniu KRS………………...…..
-            NIP……………..………….REGON……………………….…………......
+            NIP 7822885577 REGON 634512019
           </p>
         </li>
         <li>

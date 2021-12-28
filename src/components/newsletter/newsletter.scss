@@ -124,7 +124,7 @@ $gray: #9b9b9b;
   color: var(--lightenTextColor);
   text-indent: 1rem;
   transform: scale(0);
-  transition: transform 0.7s ease-in-out 1s;
+  transition: transform 0.7s ease-in-out 0.5s;
 }
 
 .newsletter-private-policy.active {

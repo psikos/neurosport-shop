@@ -12,6 +12,7 @@
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-gatsby-cloud": "^4.0.0",
+    "gatsby-plugin-gdpr-cookies": "^2.0.8",
     "gatsby-plugin-google-gtag": "^4.4.0",
     "gatsby-plugin-image": "^2.0.0",
     "gatsby-plugin-mailchimp": "^5.2.2",

@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import "./author.css"
 import Container from "../Container"
+import { FiMail } from "react-icons/fi"
 
 export default function Author({ author }) {
   return (
@@ -24,7 +25,6 @@ export default function Author({ author }) {
       >
         <div className="author-image-wrapper">
           <div className="radius-holder">
-            {" "}
             <GatsbyImage
               image={getImage(author.image.gatsbyImageData)}
               alt={author.name}
@@ -35,8 +35,17 @@ export default function Author({ author }) {
         <div className="author-content-wrapper">
           <h4 className="author-h4">Autor</h4>
           <h3 className="author-name">{author.name}</h3>
+          {author.email && (
+            <div className="author-links">
+              <span>
+                <i>
+                  <FiMail />
+                </i>
+                {author.email}
+              </span>
+            </div>
+          )}
           <p className="author-about">{author.shortBio.shortBio}</p>
-          <div className="author-links"></div>
         </div>
       </div>
     </Container>

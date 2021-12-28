@@ -8,7 +8,7 @@ import "./contactInfo.css"
 export default function ContactInfo() {
   const [showTooltip, setShowTooltip] = useState(false)
 
-  const toClipboard = "kontakt.neurosport@gmail.com"
+  const toClipboard = "kontakt@neurosport.pl"
 
   const tooltip = () => {
     setShowTooltip(true)
@@ -52,7 +52,7 @@ export default function ContactInfo() {
         61-249 Poznań <br />
         NIP: 7822885577
       </p>
-      <h3 className="contact-info-title">
+      <h3 className="contact-info-title phones">
         <span>
           Kontakt telefoniczny{" "}
           <i>

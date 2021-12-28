@@ -72,6 +72,15 @@
   top: 12%;
 }
 
+@media (max-width: 450px) {
+  .contact-form-header span i {
+    top: -1rem;
+    left: 50%;
+    font-size: 6rem;
+    opacity: 17%;
+  }
+}
+
 @media (min-width: 1600px) {
   .contact-form-header span i {
     font-size: 1.8rem;

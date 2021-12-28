@@ -6,6 +6,7 @@ import { GiCheckMark } from "react-icons/gi"
 import { MdTabletMac } from "react-icons/md"
 
 import ShopItemDetails from "../shopItemDetails/ShopItemDetails"
+import PolicyConfirmInfo from "../policyConfirmInfo/policyConfirmInfo"
 
 import "./shopItemDescription.css"
 import PaymentType from "../paymentType/PaymentType"
@@ -143,6 +144,7 @@ export default function ShopItemDescription({ item }) {
         <a className="shop-item-payment-button" href={paymentLink}>
           Kupuję za {price} zł
         </a>
+        <PolicyConfirmInfo />
         <PaymentType />
       </div>
     </>

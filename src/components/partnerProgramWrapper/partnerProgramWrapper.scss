@@ -1,0 +1,121 @@
+.partner-program-wrapper {
+  padding: 5%;
+  color: var(--lighten20TextColor);
+
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: calc(100vh - 20rem);
+    color: var(--lightenMainColor);
+    position: relative;
+    i.partner-program-wrapper-main-icon {
+      color: var(--lightenTextColor);
+      position: absolute;
+      left: 50%;
+      top: -3rem;
+      transform: translateX(-50%);
+      transition: color 1s ease-in-out;
+    }
+
+    span.partner-program-wrapper-main-span::before {
+      content: "";
+      background-color: transparent;
+      width: 120%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: -100%;
+      z-index: -100;
+      transition: left 1s ease-in-out, background-color 0.8s ease-in-out;
+    }
+
+    span.partner-program-wrapper-main-span::after {
+      position: absolute;
+      content: "Skontaktuj się z nami.";
+      font-size: 1rem;
+      line-height: 1rem;
+      color: var(--lightenTextColor);
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 25%;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out 0.9s;
+    }
+
+    &:hover {
+      i.partner-program-wrapper-main-icon {
+        color: var(--lightenMainColor);
+      }
+
+      span.partner-program-wrapper-main-span::before {
+        left: -10%;
+        background-color: var(--lightBackgroundColor);
+      }
+
+      span.partner-program-wrapper-main-span::after {
+        opacity: 100%;
+      }
+    }  
+  }
+
+  h2 {
+    margin: 7rem 0;
+    text-align: left;
+    div {
+      position: relative;
+      padding: 1rem;
+
+      span {
+          color: var(--lightenMainColor);
+      }
+    }
+
+    &:nth-child(2n-1) {
+      text-align: right;
+    }
+  }
+}
+
+.partner-program-wrapper-closing {
+    text-align: center;
+    font-family: var(--mainFont);
+    line-height: 1.4rem;
+}
+
+a.partner-program-wrapper-link {
+    width: fit-content;
+    font-family: var(--mainFontCondensed);
+    font-size: 1rem;
+    line-height: 1.2rem;
+    display: block;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    border: 1px solid var(--lightenMainColor);
+    border-radius: 3px;
+    transition: background-color 0.2s ease-in-out;
+
+    span {
+      position: relative;
+      
+    }
+
+    i.partner-program-wrapper-button-icon {
+        position: absolute;
+        left: -1.5rem;
+        top: 50%;
+        transform: translateY(-40%);
+    }
+
+    &:hover,
+    &:focus {
+      color: white;
+      background-color: var(--lightenMainColor);
+
+      i.partner-program-wrapper-button-icon {
+          color: white;
+      }
+    }
+  }

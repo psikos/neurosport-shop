@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
+import { Link } from "gatsby"
 
 import "./newsletter.css"
 
@@ -68,8 +69,8 @@ export default function Newsletter() {
             >
               Wprowadzenie adresu email jest wyrażeniem zgody na otrzymywanie
               informacji o nowościach na stronie oraz zgodą na przetwarzanie
-              danych osobowych do tych celów niezbędnych - zgodnie z polityką
-              prywatności na stronie www.neurosport.pl
+              danych osobowych do tych celów niezbędnych - zgodnie z <Link to="/private-policy">polityką
+              prywatności</Link>.
             </p>
             {/* <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups--> */}
             <div

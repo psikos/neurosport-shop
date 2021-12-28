@@ -28,7 +28,8 @@ module.exports = {
     description: `Naukowa wiedza w przystępnej formie`,
     author: `@psikos`,
     siteUrl: `https://neurosport.pl`,
-    image: 'https://raw.githubusercontent.com/psikos/neurosport-shop/main/src/images/recent_w2560.jpg',
+    image:
+      "https://raw.githubusercontent.com/psikos/neurosport-shop/main/src/images/recent_w2560.jpg",
   },
   flags: {
     PARALLEL_QUERY_RUNNING: true,
@@ -79,8 +80,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint: process.env.MAILCHIMP_ENDPOINT
-      }
+        endpoint: process.env.MAILCHIMP_ENDPOINT,
+      },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
@@ -110,6 +111,17 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: "G-61MLB41GKB",
+          cookieName: "gatsby-gdpr-google-analytics",
+          anonymize: true, // https://github.com/andrezimpel/gatsby-plugin-gdpr-cookies#anonymize
+          allowAdFeatures: false,
+        },
+      },
+    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
@@ -118,6 +130,6 @@ module.exports = {
     //     ignore: [`**/\.*`], // ignore files starting with a dot
     //   },
     // },
-    'gatsby-plugin-netlify',
+    "gatsby-plugin-netlify",
   ],
 }

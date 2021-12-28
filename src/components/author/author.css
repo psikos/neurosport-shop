@@ -33,7 +33,7 @@
 }
 
 .author-h4 {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   color: var(--lightenTextColor);
   letter-spacing: 0.2rem;
@@ -48,7 +48,7 @@
 }
 
 .author-about {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: justify;
   font-size: 0.9rem;
   line-height: 1.4rem;
@@ -69,4 +69,22 @@
   .author-content-wrapper {
     padding: 0px 20% 0 10px;
   }
+}
+
+.author-links {
+  margin: 0 0 0.4rem 1rem;
+  font-family: var(--mainFont);
+  color: var(--lightenTextColor);
+  font-size: 0.8rem;
+}
+
+.author-links span {
+  position: relative;
+}
+
+.author-links i {
+  position: absolute;
+  left: -1rem;
+  top: 50%;
+  transform: translateY(-38%);
 }

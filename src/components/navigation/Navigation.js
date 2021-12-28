@@ -1,39 +1,42 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import { AiFillHome, AiFillShopping } from "react-icons/ai"
-import { BsFillPenFill } from "react-icons/bs";
+import { AiFillHome } from "react-icons/ai"
 
 import "./navigation.css"
 
 export default function Navigation() {
+  const nav_items = [
+    {
+      label: "home",
+      link: "/",
+      icon: <AiFillHome />,
+    },
+    {
+      label: "sklep",
+      link: "/shop",
+    },
+    {
+      label: "blog",
+      link: "/blog",
+    },
+    {
+      label: "about",
+      link: "/about",
+    },
+  ]
+
   return (
     <nav className="nav">
       <ul className="nav-list">
-        <li className="nav-item">
-          <Link to="/" activeClassName="active">
-            <i>
-              <AiFillHome />
-            </i>
-            <span>home</span>
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/shop" activeClassName="active">
-            {/* <i>
-              <AiFillShopping />
-            </i> */}
-            <span>sklep</span>
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link to="/blog" activeClassName="active">
-            {/* <i>
-              <BsFillPenFill />
-            </i> */}
-            <span>blog</span>
-          </Link>
-        </li>
+        {nav_items.map(item => (
+          <li className="nav-item">
+            <Link to={item.link} activeClassName="active">
+              {item.icon && <i>{item.icon}</i>}
+              <span>{item.label}</span>
+            </Link>
+          </li>
+        ))}
       </ul>
 
       {/* <Link to="/using-ssr">Go to "Using SSR"</Link> <br />

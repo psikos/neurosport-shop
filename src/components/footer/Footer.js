@@ -1,5 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
+import CookieConsent from "../cookieConsent/CookieConsent"
 import Logo from "../logo/Logo"
 
 import "./footer.css"
@@ -51,6 +52,7 @@ export default function Footer() {
 
         <div className="footer-date">© {new Date().getFullYear()}</div>
       </div>
+      <CookieConsent />
     </footer>
   )
 }
