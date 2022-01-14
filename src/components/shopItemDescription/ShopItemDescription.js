@@ -6,7 +6,7 @@ import { GiCheckMark } from "react-icons/gi"
 import { MdTabletMac } from "react-icons/md"
 
 import ShopItemDetails from "../shopItemDetails/ShopItemDetails"
-import PolicyConfirmInfo from "../policyConfirmInfo/policyConfirmInfo"
+import PolicyConfirmInfo from "../policyConfirmInfo/PolicyConfirmInfo"
 
 import "./shopItemDescription.css"
 import PaymentType from "../paymentType/PaymentType"
