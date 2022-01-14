@@ -11,7 +11,7 @@ export default function AboutVision() {
   return (
     <>
       <Container>
-          <h2 className="about-section-header">Idea</h2>
+          <h2 className="about-section-header"><span>Idea</span></h2>
         <p className="about-p-regular first">
           <i>
             <GiBrain />

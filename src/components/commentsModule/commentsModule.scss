@@ -1,0 +1,21 @@
+.comments-module {
+  padding: 5%;
+}
+
+.comments-module-list {
+  font-family: var(--mainFont);
+  list-style: none;
+}
+
+.comments-module-title {
+    margin: 0.5rem 1.5rem;
+  span {
+    position: relative;
+    i {
+        position: absolute;
+        top: 50%;
+        left: -1.5rem;
+        transform: translateY(-41%);
+    }
+  }
+}

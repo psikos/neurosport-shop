@@ -54,6 +54,15 @@ ul li{
     position: relative;
     color: rgba(255, 255, 255, 0.9);
     margin: 20px -10px 20px -10px;
+    overflow-y: scroll;
+
+    a {
+      color: var(--lightTextColor);
+
+      &:hover {
+        color: var(--lightBackgroundColor);
+      }
+    }
 
     &::before {
       background: url("../../images/brain.png");

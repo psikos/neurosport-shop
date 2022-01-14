@@ -17,6 +17,10 @@
   background-color: var(--lightBackgroundColor);
 }
 
+.shop-item-preview:last-of-type {
+  margin-bottom: 3rem;
+}
+
 .shop-item-preview-link-wrapper {
   display: flex;
   flex-direction: column;

@@ -1,17 +1,23 @@
 .about-section-header {
+  color: var(--lighten20TextColor);
   font-size: 3rem;
   padding: 5% 5% 0;
-  position: relative;
+  
   line-height: 3rem;
   margin-top: 2rem;
   margin-left: 2rem;
-  &::before {
+
+span {
+  position: relative;
+}
+
+  span::before {
     position: absolute;
     height: 3rem;
     width: 1.5rem;
-    bottom: 0;
-    left: 0;
-    // transform: translateY(-45%);
+    top: 50%;
+    left: -2rem;
+    transform: translateY(-50%);
     background-color: var(--lightenMainColor);
     content: "";
   }

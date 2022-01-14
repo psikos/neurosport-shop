@@ -22,12 +22,14 @@ const Layout = ({ children, title, description, image }) => {
   return (
     <>
       <Seo title={title} description={description} image={image} />
-      <Header />
+      <div className="page-content-wrapper">
+        <Header />
 
-      <div className="content">
-        <main>{children}</main>
+        <div className="content">
+          <main>{children}</main>
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   )
 }

@@ -33,6 +33,12 @@
   padding: 0px 30px;
 }
 
+@media (max-width: 600px) {
+  .author-content-wrapper {
+    margin-top: 1rem;
+  }
+}
+
 .author-h4 {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;

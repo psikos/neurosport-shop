@@ -12,7 +12,7 @@ export default function Recent() {
         <StaticImage
           // src="..\..\images\recent_w2560.jpg"
           src="https://raw.githubusercontent.com/psikos/neurosport-shop/main/src/images/recent_w2560.jpg"
-          alt="A Gatsby astronaut"
+          alt="Weganin Wiedzień Winien"
           className="image"
         />
       </div>

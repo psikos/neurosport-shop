@@ -20,9 +20,9 @@ export default function PrivatePolicy() {
         </li>
         <li>
           <p>
-            Administratorem danych osobowych zawartych w serwisie jest
-            Martyna Hursowicz z siedzibą na os. Stare Żegrze 177/1 w Poznaniu KRS………………...…..
-            NIP 7822885577 REGON 634512019
+            Administratorem danych osobowych zawartych w serwisie jest Martyna
+            Hursowicz z siedzibą na os. Stare Żegrze 177/1 w Poznaniu NIP
+            7822885577 REGON 634512019
           </p>
         </li>
         <li>
@@ -105,6 +105,110 @@ export default function PrivatePolicy() {
             z zapisów niniejszej polityki prywatności jesteśmy do dyspozycji -
             nasze dane znaleźć można w zakładce -{" "}
             <Link to="/contact">KONTAKT</Link>.
+          </p>
+        </li>
+      </ol>
+      <h2>Cookies</h2>
+      <ol className="private-policy-list">
+        <li>
+          <p>
+            Serwis zbiera w sposób automatyczny tylko informacje zawarte w
+            plikach cookies.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pliki (cookies) są plikami tekstowymi, które przechowywane są w
+            urządzeniu końcowym użytkownika serwisu. Przeznaczone są do
+            korzystania ze stron serwisu. Przede wszystkim zawierają nazwę
+            strony internetowej swojego pochodzenia, swój unikalny numer, czas
+            przechowywania na urządzeniu końcowym.
+          </p>
+        </li>
+        <li>
+          <p>
+            Operator serwisu (tu nazwa i ewentualnie adres) jest podmiotem
+            zamieszczającym na urządzeniu końcowym swojego użytkownika pliki
+            cookies oraz mającym do nich dostęp.
+          </p>
+        </li>
+        <li>
+          <p>Operator serwisu wykorzystuje pliki (cookies) w celu:</p>
+          <ol className="private-policy-list-inside">
+            <li>
+              <p>
+                dopasowania zawartości strony internetowej do indywidualnych
+                preferencji użytkownika, przede wszystkim pliki te rozpoznają
+                jego urządzenie, aby zgodnie z jego preferencjami wyświetlić
+                stronę;
+              </p>
+            </li>
+            <li>
+              <p>
+                przygotowywania statystyk pomagających poznaniu preferencji i
+                zachowań użytkowników, analiza tych statystyk jest anonimowa i
+                umożliwia dostosowanie zawartości i wyglądu serwisu do
+                panujących trendów, statystyki stosuje się też do oceny
+                popularności strony;
+              </p>
+            </li>
+            <li>
+              <p>możliwości logowania do serwisu;</p>
+            </li>
+            <li>
+              <p>
+                utrzymania logowania użytkownika na każdej kolejnej stronie
+                serwisu.
+              </p>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <p>
+            Serwis stosuje dwa zasadnicze rodzaje plików (cookies) - sesyjne i
+            stałe. Pliki sesyjne są tymczasowe, przechowuje się je do momentu
+            opuszczenia strony serwisu (poprzez wejście na inną stronę,
+            wylogowanie lub wyłączenie przeglądarki). Pliki stałe przechowywane
+            są w urządzeniu końcowym użytkownika do czasu ich usunięcia przez
+            użytkownika lub przez czas wynikający z ich ustawień.
+          </p>
+        </li>
+        <li>
+          <p>
+            Użytkownik może w każdej chwili dokonać zmiany ustawień swojej
+            przeglądarki, aby zablokować obsługę plików (cookies) lub
+            każdorazowo uzyskiwać informacje o ich umieszczeniu w swoim
+            urządzeniu. Inne dostępne opcje można sprawdzić w ustawieniach
+            swojej przeglądarki internetowej. Należy pamiętać, że większość
+            przeglądarek domyślnie jest ustawione na akceptację zapisu plików
+            (cookies)w urządzeniu końcowym.
+          </p>
+        </li>
+        <li>
+          <p>
+            Operator Serwisu informuje, że zmiany ustawień w przeglądarce
+            internetowej użytkownika mogą ograniczyć dostęp do niektórych
+            funkcji strony internetowej serwisu.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pliki (cookies) z których korzysta serwis (zamieszczane w urządzeniu
+            końcowym użytkownika) mogą być udostępnione jego partnerom oraz
+            współpracującym z nim reklamodawcą.
+          </p>
+        </li>
+        <li>
+          <p>
+            Informacje dotyczące ustawień przeglądarek internetowych dostępne są
+            w jej menu (pomoc) lub na stronie jej producenta.
+          </p>
+        </li>
+        <li>
+          <p>
+            Bardziej szczegółowe informacje na temat plików (cookies) dostępne
+            są na stronie{" "}
+            <a href="http://ciasteczka.org.pl">ciasteczka.org.pl</a>
           </p>
         </li>
       </ol>

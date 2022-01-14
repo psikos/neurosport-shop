@@ -8,7 +8,7 @@ export default function BlogList({ posts }) {
       <h1 className="article-list-headline">Najnowsze</h1>
       <ul className="article-list">
         {posts.map(post => {
-          return <ArticlePreview post={post} />
+          return <ArticlePreview post={post} key={post.slug} />
         })}
       </ul>
     </div>

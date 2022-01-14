@@ -2,7 +2,7 @@ import React from 'react'
 import {
     FacebookShareButton,
     FacebookIcon,
-    FacebookMessengerIcon,
+    // FacebookMessengerIcon,
     LinkedinShareButton,
     LinkedinIcon,
     TwitterShareButton,

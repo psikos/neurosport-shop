@@ -9,7 +9,7 @@ import Newsletter from "../components/newsletter/Newsletter"
 
 const IndexPage = ({ data: { posts } }) => (
   <Layout
-    title={"NEUROSPORT"}
+    title={"Wiedza, artykuły, ebooki, audiobooki, książki."}
     description={"Naukowa wiedza w przystępnej formie"}
     image={
       "https://raw.githubusercontent.com/psikos/neurosport-shop/main/src/images/recent_w2560.jpg"

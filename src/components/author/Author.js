@@ -10,10 +10,7 @@ export default function Author({ author }) {
   return (
     <div className="author-wrapper">
       <Container>
-        <div
-          className="author"
-         
-        >
+        <div className="author">
           <div className="author-image-wrapper">
             <div className="radius-holder">
               <GatsbyImage

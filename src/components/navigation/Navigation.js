@@ -30,7 +30,7 @@ export default function Navigation() {
     <nav className="nav">
       <ul className="nav-list">
         {nav_items.map(item => (
-          <li className="nav-item">
+          <li className="nav-item" key={item.label}>
             <Link to={item.link} activeClassName="active">
               {item.icon && <i>{item.icon}</i>}
               <span>{item.label}</span>

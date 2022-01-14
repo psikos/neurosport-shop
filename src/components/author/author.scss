@@ -35,6 +35,9 @@
 
 .author-content-wrapper {
   padding: 0px 30px;
+  @media (max-width: 600px) {
+    margin-top: 1rem;
+  }
 }
 
 .author-h4 {

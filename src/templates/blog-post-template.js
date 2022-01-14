@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { graphql } from "gatsby"
 
 import { BLOCKS } from "@contentful/rich-text-types"
@@ -9,6 +9,9 @@ import Container from "../components/Container"
 import BlogPostRenderer from "../components/blogPostRenderer/BlogPostRenderer"
 import BlogPostHeader from "../components/blogPostHeader/BlogPostHeader"
 import BlogPostFooter from "../components/blogPostFooter/BlogPostFooter"
+
+import { getBlogPostComments, addBlogPostComment, addFirstComment } from "../utils/blogPosts"
+import CommentsModule from "../components/commentsModule/CommentsModule"
 
 export const query = graphql`
   query ($slug: String!) {
@@ -54,6 +57,22 @@ export const query = graphql`
 `
 
 const BlogPostTemplate = ({ data: { post } }) => {
+  const [comments, setComments] = useState([])
+
+  const slug_raw = post.slug
+  const slug = `/blog/${slug_raw}`
+
+  useEffect(() => {
+    getBlogPostComments(slug_raw, setComments)
+  }, [slug_raw])
+
+  const handleCommentAdd = comment => {
+    const isCommented = comments.length > 0 ? true : false
+
+    isCommented ? addBlogPostComment(comment) : addFirstComment(comment)
+    setComments([comment.comments[0], ...comments])
+  }
+
   const options = {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: node => {
@@ -82,9 +101,12 @@ const BlogPostTemplate = ({ data: { post } }) => {
         <BlogPostHeader title={post.title} author={post.author} />
 
         <BlogPostRenderer output={output} />
-        <BlogPostFooter
-          url={url}
-          sources={sources}
+        <BlogPostFooter url={url} sources={sources} />
+        <CommentsModule
+          comments={comments}
+          handleCommentAdd={handleCommentAdd}
+          slug={slug}
+          slug_raw={slug_raw}
         />
       </Container>
     </Layout>

@@ -100,3 +100,21 @@ a {
 a:hover {
   color: var(--darkenMainColor);
 }
+
+.page-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-content-wrapper footer {
+  margin-top: auto;
+}
+
+.button-like-a {
+  border: none;
+  background: none;
+  font-family: var(--headerFont);
+  font-size: 0.8rem;
+  color: var(--textColor);
+}

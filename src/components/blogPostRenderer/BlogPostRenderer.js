@@ -7,7 +7,7 @@ const BlogPostRenderer = ({ output }) => {
 
   return (
     <div className="post-renderer-wrapper">
-      <div className="post-renderer">{output}</div>
+      <article className="post-renderer">{output}</article>
     </div>
   )
 }
