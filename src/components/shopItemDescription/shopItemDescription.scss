@@ -40,11 +40,13 @@
   color: white;
   font-weight: 700;
   cursor: pointer;
+  border: none;
 
   margin: 0 0.5rem 0 0;
 
   &:hover {
     background-color: var(--lighten20TextColor);
+    color: white;
   }
 
   &:last-of-type {
@@ -52,6 +54,7 @@
   }
 
   &.active-category {
+    color: white;
     background-color: var(--mainColor);
     &:hover {
       background-color: var(--darkenMainColor);

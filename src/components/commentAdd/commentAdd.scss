@@ -43,9 +43,11 @@
   }
 
   .comment-add-form-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     @media (min-width: 800px) {
-      display: flex;
-      gap: 1rem;
+      flex-direction: row;
 
       .comment-add-form-user-info-item {
         width: 50%;
@@ -93,7 +95,7 @@
   position: relative;
 
   button {
-      cursor: pointer;
+    cursor: pointer;
     position: absolute;
     bottom: -1rem;
     left: 50%;

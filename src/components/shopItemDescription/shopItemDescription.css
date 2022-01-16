@@ -41,11 +41,13 @@
   color: white;
   font-weight: 700;
   cursor: pointer;
+  border: none;
   margin: 0 0.5rem 0 0;
 }
 
 .shop-item-category-item:hover {
   background-color: var(--lighten20TextColor);
+  color: white;
 }
 
 .shop-item-category-item:last-of-type {
@@ -53,6 +55,7 @@
 }
 
 .shop-item-category-item.active-category {
+  color: white;
   background-color: var(--mainColor);
   position: relative;
 }

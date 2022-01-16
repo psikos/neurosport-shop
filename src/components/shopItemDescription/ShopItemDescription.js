@@ -30,7 +30,6 @@ export default function ShopItemDescription({ item }) {
     setPrice(item.priceOptionsJson.priceOptions[i].price)
     setOption(item.priceOptionsJson.priceOptions[i].option)
     setPaymentLink(item.priceOptionsJson.priceOptions[i].payment_link)
-    console.log(item.priceOptionsJson.priceOptions[i].payment_link)
   }
 
   return (
@@ -62,15 +61,16 @@ export default function ShopItemDescription({ item }) {
             }
 
             return (
-              <p
-                className={`${shop_item_category} ${category==='audiobook' && 'audiobook'}`}
+              <button
+                className={`${shop_item_category} ${
+                  category === "audiobook" && "audiobook"
+                }`}
                 onClick={e => {
                   handleChangePricing(e, index)
                 }}
                 onKeyDown={e => {
                   handleChangePricing(e, index)
                 }}
-                role="button"
               >
                 <span>
                   {category}
@@ -79,7 +79,7 @@ export default function ShopItemDescription({ item }) {
                     {category === "audiobook" && <AiFillAudio />}
                   </i>
                 </span>
-              </p>
+              </button>
             )
           })}
         </div>
@@ -90,8 +90,7 @@ export default function ShopItemDescription({ item }) {
           </div>
           <div
             className="shop-item-description-select-wrapper"
-            onClick={e => setIsSelecOpen(!isSelecOpen)}
-            onBlur={e => setIsSelecOpen(false)}
+           
           >
             <div className="select-icon">
               {isSelecOpen ? <FiChevronDown /> : <FiChevronLeft />}
@@ -101,10 +100,15 @@ export default function ShopItemDescription({ item }) {
               id=""
               value={optionIndex}
               onChange={handleChangePricing}
+              onClick={e => setIsSelecOpen(!isSelecOpen)}
+              onKeyDown={e => setIsSelecOpen(!isSelecOpen)}
+              onBlur={e => setIsSelecOpen(false)}
+              // role="listbox"
             >
               {item.priceOptionsJson.priceOptions.map((option, index) => {
                 return (
                   <option
+                  // role="option"
                     className="shop-item-description-select-option"
                     value={index}
                   >
@@ -119,9 +123,9 @@ export default function ShopItemDescription({ item }) {
           className={optionIndex === 1 ? "shop-item-price-info" : "non-visible"}
         >
           Obecnie prowadzona jest przedsprzedaż audiobooka w promocyjnej cenie{" "}
-          {price} - oznacza to, że wybierając opcję {option}, <b>audiobook zostanie
-          udostępniony odrazu po jego nagraniu</b>. Nagranie planowane jest na
-          styczeń 2022.
+          {price} - oznacza to, że wybierając opcję {option},{" "}
+          <b>audiobook zostanie udostępniony odrazu po jego nagraniu</b>.
+          Nagranie planowane jest na styczeń 2022.
         </div>
         <div className="shop-items-description-benefits-wrapper">
           <h3>Między innymi dowiesz się jak:</h3>
