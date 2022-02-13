@@ -32,9 +32,10 @@ export const query = graphql`
       benefitsOfReading
       priceOptionsJson {
         priceOptions {
-          price
+          option_description
           option
           payment_link
+          price
         }
       }
       longDescription {

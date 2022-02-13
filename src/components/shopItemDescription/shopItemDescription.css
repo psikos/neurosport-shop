@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .shop-item-description-wrapper {
   padding: 5%;
   /* Handle */
@@ -62,22 +61,6 @@
 
 .shop-item-category-item.active-category:hover {
   background-color: var(--darkenMainColor);
-}
-
-.shop-item-category-item.active-category.audiobook::after {
-  font-weight: 500;
-  font-size: 0.8rem;
-  padding: 0.3rem;
-  letter-spacing: initial;
-  position: absolute;
-  content: 'PRZEDSPRZEDAŻ!';
-  color: white;
-  background-color: red;
-  border-radius: 2px;
-  bottom: -70%;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: var(--boxShadow);
 }
 
 .shop-item-category-item span {
@@ -229,5 +212,22 @@
 .shop-item-price-info {
   display: block;
   font-family: var(--mainFont);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  background-color: var(--lightBackgroundColor);
+  padding: 1.5rem 1.2rem 1.2rem;
+  line-height: 1.1rem;
+  border-radius: 4px;
+  color: var(--lightenTextColor);
+  box-shadow: var(--boxShadow);
+  width: fit-content;
+  position: relative;
+}
+
+.shop-item-price-info::before {
+  content: "pakiet zawiera:";
+  position: absolute;
+  top: 0.3rem;
+  left: 0.6rem;
+  font-size: 0.6rem;
+  color: var(--lightTextColor);
 }

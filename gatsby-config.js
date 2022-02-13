@@ -32,10 +32,10 @@ module.exports = {
       "https://raw.githubusercontent.com/psikos/neurosport-shop/main/src/images/recent_w2560.jpg",
   },
   flags: {
-    PARALLEL_QUERY_RUNNING: true,
+    // PARALLEL_QUERY_RUNNING: true,
     // PRESERVE_FILE_DOWNLOAD_CACHE: true,
     // DEV_WEBPACK_CACHE: true,
-    PARALLEL_SOURCING: true,
+    // PARALLEL_SOURCING: true,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

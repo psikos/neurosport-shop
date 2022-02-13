@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.shop-item-list {
+  list-style: none;
+}
+
 .shop-item-preview {
   text-align: center;
   width: 370px;
@@ -97,11 +101,33 @@
   font-weight: 600;
 }
 
-.shop-item-preview .image-wrapper::after {
-  content: "ebook";
-  background: var(--lightenMainColor);
+.shop-item-preview .image-wrapper .image-wrapper-label-holder {
+  position: absolute;
   bottom: 10px;
   left: 10px;
+}
+
+.shop-item-preview .image-wrapper .image-wrapper-label-holder ul {
+  display: flex;
+  list-style: none;
+}
+
+.shop-item-preview .image-wrapper .image-wrapper-label-holder span {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-family: var(--mainFont);
+  color: white;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  padding: 3px 6px;
+}
+
+.shop-item-preview .image-wrapper .image-wrapper-label-holder .ebook {
+  background: var(--lightenMainColor);
+}
+
+.shop-item-preview .image-wrapper .image-wrapper-label-holder .audiobook {
+  background: orange;
 }
 
 .shop-item-preview .image-wrapper::before, .shop-item-preview .image-wrapper::after {

@@ -8,9 +8,13 @@ export default function shop({ data: { shopItems } }) {
   return (
     <Layout title={"Sklep"} description="Wszystkie produkty NEUROSPORT">
       <Container>
-        {shopItems.nodes.map(item => (
-          <ShopItemPreview item={item} />
-        ))}
+        <ul className="shop-item-list">
+          {shopItems.nodes.map(item => (
+            <li key={item.name}>
+              <ShopItemPreview item={item} />
+            </li>
+          ))}
+        </ul>
       </Container>
     </Layout>
   )
@@ -25,14 +29,16 @@ export const query = graphql`
         basePrice
         paymentLink
         name
+        category
         images {
           gatsbyImageData
         }
         priceOptionsJson {
           priceOptions {
-            price
+            option_description
             option
             payment_link
+            price
           }
         }
       }

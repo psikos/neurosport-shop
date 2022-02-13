@@ -15,12 +15,14 @@ export default function ShopItemDescription({ item }) {
   const [optionIndex, setOptionIndex] = useState(0)
   const initialPricingState = item.priceOptionsJson.priceOptions[optionIndex]
   const [price, setPrice] = useState(initialPricingState.price)
+  const [optionDescription, setOptionDescription] = useState(
+    initialPricingState.option_description
+  )
   const [option, setOption] = useState(initialPricingState.option)
   const [paymentLink, setPaymentLink] = useState(
-    item.priceOptionsJson.priceOptions[0].payment_link
+    initialPricingState.payment_link
   )
   const [isSelecOpen, setIsSelecOpen] = useState(false)
-
   const handleChangePricing = (e, i) => {
     if (!i && i !== 0) {
       i = e.target.value
@@ -29,6 +31,9 @@ export default function ShopItemDescription({ item }) {
     setOptionIndex(i)
     setPrice(item.priceOptionsJson.priceOptions[i].price)
     setOption(item.priceOptionsJson.priceOptions[i].option)
+    setOptionDescription(
+      item.priceOptionsJson.priceOptions[i].option_description
+    )
     setPaymentLink(item.priceOptionsJson.priceOptions[i].payment_link)
   }
 
@@ -88,10 +93,7 @@ export default function ShopItemDescription({ item }) {
           <div className="shop-item-price">
             <span>PLN</span> {price}
           </div>
-          <div
-            className="shop-item-description-select-wrapper"
-           
-          >
+          <div className="shop-item-description-select-wrapper">
             <div className="select-icon">
               {isSelecOpen ? <FiChevronDown /> : <FiChevronLeft />}
             </div>
@@ -108,7 +110,7 @@ export default function ShopItemDescription({ item }) {
               {item.priceOptionsJson.priceOptions.map((option, index) => {
                 return (
                   <option
-                  // role="option"
+                    // role="option"
                     className="shop-item-description-select-option"
                     value={index}
                   >
@@ -120,12 +122,9 @@ export default function ShopItemDescription({ item }) {
           </div>
         </div>
         <div
-          className={optionIndex === 1 ? "shop-item-price-info" : "non-visible"}
+          className="shop-item-price-info"
         >
-          Obecnie prowadzona jest przedsprzedaż audiobooka w promocyjnej cenie{" "}
-          {price} - oznacza to, że wybierając opcję {option},{" "}
-          <b>audiobook zostanie udostępniony odrazu po jego nagraniu</b>.
-          Nagranie planowane jest na styczeń 2022.
+          {optionDescription}
         </div>
         <div className="shop-items-description-benefits-wrapper">
           <h3>Między innymi dowiesz się jak:</h3>

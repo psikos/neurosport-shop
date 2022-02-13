@@ -1,3 +1,6 @@
+.shop-item-list {
+  list-style: none;
+}
 .shop-item-preview {
   text-align: center;
   width: 370px;
@@ -92,11 +95,32 @@
     font-weight: 600;
   }
 
-  &::after {
-    content: "ebook";
-    background: var(--lightenMainColor);
+  .image-wrapper-label-holder {
+    position: absolute;
     bottom: 10px;
     left: 10px;
+
+    ul {
+      display: flex;
+      list-style: none;
+    }
+
+    span {
+      display: inline-block;
+      margin-right: 0.5rem;
+      font-family: var(--mainFont);
+      color: white;
+      border-radius: 2px;
+      font-size: 0.8rem;
+      padding: 3px 6px;
+    }
+
+    .ebook {
+      background: var(--lightenMainColor);
+    }
+    .audiobook {
+      background: orange;
+    }
   }
 
   &::before,
@@ -132,7 +156,9 @@
   color: var(--lightenTextColor);
   width: 350px;
 
-  @media (min-width: 1600px) { width: 400px; }
+  @media (min-width: 1600px) {
+    width: 400px;
+  }
 }
 
 .shop-item-preview .image-wrapper,
