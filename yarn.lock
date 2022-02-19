@@ -5979,10 +5979,10 @@
   dependencies:
     "@babel/runtime" "^7.11.2"
 
-"gatsby-plugin-google-gtag@^4.4.0":
-  "integrity" "sha512-pRwm1WV/j29qITeVwoSWOk1R2u42Qp6nzGscwZjAJx8Mx52DeqwL1WeEPAoxIUH+66e7NY+QDinkpGEeJ4xADg=="
-  "resolved" "https://registry.npmjs.org/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.4.0.tgz"
-  "version" "4.4.0"
+"gatsby-plugin-google-gtag@^4.7.0":
+  "integrity" "sha512-h+ZZp49lEaKKB367bmgYPVhTXwwW1s5zZq4Gm1EBJSuOx3Obo17TXXedbxIAQhggiHfIRvt+J/dr5yzcDxlzZQ=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-4.7.0.tgz"
+  "version" "4.7.0"
   dependencies:
     "@babel/runtime" "^7.15.4"
     "minimatch" "^3.0.4"

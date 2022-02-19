@@ -39,6 +39,7 @@ export const query = graphql`
             option
             payment_link
             price
+            old_price
           }
         }
       }

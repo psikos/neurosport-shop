@@ -20,9 +20,8 @@ export default function PrivatePolicy() {
         </li>
         <li>
           <p>
-            Administratorem danych osobowych zawartych w serwisie jest Martyna
-            Hursowicz z siedzibą na os. Stare Żegrze 177/1 w Poznaniu NIP
-            7822885577 REGON 634512019
+            Administratorem danych osobowych zawartych w serwisie jest Jakub Wiącek NEUROSPORT z siedzibą na ul. Klonowa 6/28 w Poznaniu, NIP
+            7831851448, REGON 521215059.
           </p>
         </li>
         <li>

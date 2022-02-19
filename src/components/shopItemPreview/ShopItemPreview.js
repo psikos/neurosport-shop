@@ -4,7 +4,6 @@ import "./shopItemPreview.css"
 import { Link } from "gatsby"
 
 export default function ShopItemPreview({ item }) {
-  console.log(item.category)
   return (
     <div className="shop-item-preview">
       <Link
@@ -20,10 +19,9 @@ export default function ShopItemPreview({ item }) {
             />
             <div className="image-wrapper-label-holder">
               <ul>
-               
                 {item.category.map(cat => (
                   <li key={`${cat}-label`}>
-                    <span className={cat}>{ cat }</span>
+                    <span className={cat}>{cat}</span>
                   </li>
                 ))}
               </ul>
@@ -31,7 +29,14 @@ export default function ShopItemPreview({ item }) {
           </div>
           <h2 className="shop-item-name">{item.name}</h2>
           <p className="shop-item-preview-description">{item.description}</p>
-          <p className="shop-item-price">{item.basePrice} zł</p>
+          <p className="shop-item-price">
+            {item.priceOptionsJson.priceOptions[0].old_price && (
+              <span className="old-price">
+                {item.priceOptionsJson.priceOptions[0].old_price}{" "}
+              </span>
+            )}
+            {item.basePrice} zł
+          </p>
         </div>
       </Link>
       <div className="shop-item-preview-buttons">

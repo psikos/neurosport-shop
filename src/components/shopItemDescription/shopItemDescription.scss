@@ -215,7 +215,7 @@
   padding: 1.5rem 1.2rem 1.2rem;
   line-height: 1.1rem;
   border-radius: 4px;
-  color: var(--lightenTextColor);
+  color: var(--lighten20TextColor);
   box-shadow: var(--boxShadow);
   width: fit-content;
   position: relative;
@@ -228,4 +228,57 @@
     font-size: 0.6rem;
     color: var(--lightTextColor);
   }
+}
+
+.old-price {
+  @media (max-width: 420px) {
+    display: inline-block;
+
+    &::after {
+      content: 'Poprzednia cena';
+      position: absolute;
+      background-color: red;
+      color: white;
+      font-weight: 500;
+      font-size: 0.7rem;
+      bottom: 50%;
+      left: calc(100% + 0.5rem);
+      transform: translateY(50%);
+      padding: 0.3rem 0.5rem;
+      z-index: 100;
+      border-radius: 3px;
+      white-space: wrap;
+      
+    }
+  }
+  cursor: help;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 130%;
+    left: -14%;
+    bottom: 50%;
+    height: 1px;
+    background-color: red;
+    transform: rotate(45deg);
+  }
+  @media (min-width: 421px) {
+  &:hover::after {
+    content: 'Poprzednia cena';
+    position: absolute;
+    background-color: red;
+    color: white;
+    font-weight: 500;
+    font-size: 0.7rem;
+    bottom: calc(-100% - 0.4rem);
+    right: -0.3rem;
+    // transform: translateX(50%);
+    padding: 0.3rem 0.5rem;
+    z-index: 100;
+    border-radius: 3px;
+    white-space: nowrap;
+    
+  }
+}
 }

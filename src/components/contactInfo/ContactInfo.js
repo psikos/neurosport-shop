@@ -47,10 +47,10 @@ export default function ContactInfo() {
 
       <h3 className="contact-info-title">Dane kontaktowe</h3>
       <p>
-        Martyna Hursowicz <br />
-        os. Stare Żegrze 177/1 <br />
-        61-249 Poznań <br />
-        NIP: 7822885577
+        Jakub Wiącek NEUROSPORT <br />
+        ul. Klonowa 6/28 <br />
+        61-468 Poznań <br />
+        NIP: 7831851448
       </p>
       <h3 className="contact-info-title phones">
         <span>
@@ -61,8 +61,8 @@ export default function ContactInfo() {
         </span>
       </h3>
       <p className="contact-info-phones">
-        <a href="tel:691739214">691 739 214</a> <br />
-        <a href="tel:697881422">697 881 422</a>
+        <a href="tel:697881422">697 881 422</a> <br />
+        <a href="tel:691739214">691 739 214</a>
       </p>
     </div>
   )

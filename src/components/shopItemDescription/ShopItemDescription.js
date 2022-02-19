@@ -15,6 +15,7 @@ export default function ShopItemDescription({ item }) {
   const [optionIndex, setOptionIndex] = useState(0)
   const initialPricingState = item.priceOptionsJson.priceOptions[optionIndex]
   const [price, setPrice] = useState(initialPricingState.price)
+  const [oldPrice, setOldPrice] = useState(initialPricingState.old_price)
   const [optionDescription, setOptionDescription] = useState(
     initialPricingState.option_description
   )
@@ -30,6 +31,7 @@ export default function ShopItemDescription({ item }) {
 
     setOptionIndex(i)
     setPrice(item.priceOptionsJson.priceOptions[i].price)
+    setOldPrice(item.priceOptionsJson.priceOptions[i].old_price)
     setOption(item.priceOptionsJson.priceOptions[i].option)
     setOptionDescription(
       item.priceOptionsJson.priceOptions[i].option_description
@@ -91,7 +93,7 @@ export default function ShopItemDescription({ item }) {
 
         <div className="shop-item-price-wrapper">
           <div className="shop-item-price">
-            <span>PLN</span> {price}
+            <span>PLN</span> {price} <span className="old-price">{oldPrice}</span>
           </div>
           <div className="shop-item-description-select-wrapper">
             <div className="select-icon">

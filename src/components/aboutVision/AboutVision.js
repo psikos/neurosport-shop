@@ -1,17 +1,19 @@
 import React from "react"
-import {  Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Container from "../Container"
 
 import { GiBrain } from "react-icons/gi"
 
-import './aboutVision.css'
+import "./aboutVision.css"
 
 export default function AboutVision() {
   return (
     <>
       <Container>
-          <h2 className="about-section-header"><span>Idea</span></h2>
+        <h2 className="about-section-header">
+          <span>Idea</span>
+        </h2>
         <p className="about-p-regular first">
           <i>
             <GiBrain />
@@ -27,15 +29,14 @@ export default function AboutVision() {
       </Container>
       <div className="about-p-wrapper">
         <p className="about-p">
-          Internet przepełniony jest wiedzą. Ta nie zawsze pochodzi z rzetelnych
-          źródeł. Nieograniczona dostępność informacji, a właściwie trudność w
-          ustaleniu jej źródeł powoduje rozpowszechnianie się wiedzy
-          nieprawdziwej.{" "}
+          Internet przepełniony jest informacjami. Te nie zawsze pochodzą z
+          rzetelnych źródeł.{" "}
           <Link to="/" _target="blank">
             Neurosport
           </Link>{" "}
-          to baza wiedzy oparta tylko o naukowe dowody. Treści pojawiające się
-          na stronie powstają zawsze w oparciu o aktualne badania naukowe.
+          to baza wiedzy oparta o publikacje naukowe. poddane krytycznej
+          analizie, przekazane za pośrednictwem przystępnego języka i mające
+          praktyczny charakter.
         </p>
       </div>
       <Container>
@@ -45,9 +46,7 @@ export default function AboutVision() {
           doskonałości. Informacje przekazywane przez NEUROSPORT pomogą
           optymalizować liczne aspekty życia codziennego za pomocą objaśnienia
           najnowszych wyników badań bezpośrednio lub pośrednio związanych z
-          układem nerwowym. NEUROSPORT to fachowe treści poddane krytycznej
-          analizie, przekazane za pośrednictwem przystępnego języka i mające
-          praktyczny charakter.
+          układem nerwowym.
         </p>
       </Container>
     </>

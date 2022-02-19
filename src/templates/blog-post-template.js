@@ -67,6 +67,7 @@ const BlogPostTemplate = ({ data: { post } }) => {
   }, [slug_raw])
 
   const handleCommentAdd = comment => {
+    console.log();
     const isCommented = comments.length > 0 ? true : false
 
     isCommented ? addBlogPostComment(comment) : addFirstComment(comment)

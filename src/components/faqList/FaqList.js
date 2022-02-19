@@ -12,7 +12,7 @@ export default function FaqList() {
             Polityka Prywatności jest dostępna pod poniższym{" "}
             <Link className="underlined-link" to="/private-policy">
               linkiem
-            </Link>
+            </Link>.
           </p>
         </li>
         <li>
@@ -21,7 +21,18 @@ export default function FaqList() {
             Regulamin sklemu jest dostępny w tym{" "}
             <Link className="underlined-link" to="/terms-of-use">
               miejscu
-            </Link>
+            </Link>.
+          </p>
+        </li>
+        <li>
+          <h2>Jak otrzymam zakupiony produkt?</h2>
+          <p>
+            Produkty cyfrowe jak ebook czy audiobook dostępne w naszym{' '}
+            <Link className="underlined-link" to="/shop">
+              sklepie
+            </Link>{" "}
+            udostępniane są kupującemu zaraz po dokonaniu transakcji na podany w
+            jej trakcie adres email.
           </p>
         </li>
       </ul>
