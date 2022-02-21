@@ -3,9 +3,9 @@ require("dotenv").config({
 })
 
 const contentfulConfig = {
-  spaceId: process.env.CONTENTFUL_SPACE_ID,
+  spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
   accessToken:
-    process.env.CONTENTFUL_ACCESS_TOKEN ||
+    process.env.GATSBY_CONTENTFUL_ACCESS_TOKEN ||
     process.env.CONTENTFUL_DELIVERY_TOKEN,
 }
 
@@ -43,7 +43,8 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-61MLB41GKB", // Google Analytics / GA
+          //"G-61MLB41GKB", // Google Analytics / GA
+          process.env.GATSBY_GOOGLE_TRACKING_ID,
         ],
         pluginConfig: {
           // Puts tracking script in the head instead of the body
@@ -93,7 +94,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
-        endpoint: process.env.MAILCHIMP_ENDPOINT,
+        endpoint: process.env.GATSBY_MAILCHIMP_ENDPOINT,
       },
     },
     {
